@@ -5,8 +5,8 @@
 $menus = array();
 
 $tmp = array(
-    'modextra' => array(
-        'description' => 'modextra_menu_desc',
+    'dropcalendar' => array(
+        'description' => 'dropcalendar_menu_desc',
         'action' => 'home',
         //'icon' => '<i class="icon icon-large icon-modx"></i>',
     ),

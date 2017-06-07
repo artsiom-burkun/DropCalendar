@@ -8,7 +8,7 @@ $tmp = array(/*
     'some_setting' => array(
         'xtype' => 'combo-boolean',
         'value' => true,
-        'area' => 'modextra_main',
+        'area' => 'dropcalendar_main',
     ),
     */
 );
@@ -18,7 +18,7 @@ foreach ($tmp as $k => $v) {
     $setting = $modx->newObject('modSystemSetting');
     $setting->fromArray(array_merge(
         array(
-            'key' => 'modextra_' . $k,
+            'key' => 'dropcalendar_' . $k,
             'namespace' => PKG_NAME_LOWER,
         ), $v
     ), '', true, true);

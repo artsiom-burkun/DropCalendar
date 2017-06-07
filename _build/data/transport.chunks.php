@@ -5,11 +5,11 @@
 $chunks = array();
 
 $tmp = array(
-    'tpl.modExtra.item' => array(
+    'tpl.dropCalendar.item' => array(
         'file' => 'item',
         'description' => '',
     ),
-    'tpl.modExtra.office' => array(
+    'tpl.dropCalendar.office' => array(
         'file' => 'office',
         'description' => '',
     ),

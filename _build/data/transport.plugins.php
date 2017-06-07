@@ -5,8 +5,8 @@
 $plugins = array();
 
 $tmp = array(/*
-    'modExtra' => array(
-        'file' => 'modextra',
+    'dropCalendar' => array(
+        'file' => 'dropcalendar',
         'description' => '',
         'events' => array(
             'OnManagerPageInit' => array()

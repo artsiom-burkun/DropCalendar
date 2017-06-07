@@ -5,8 +5,8 @@
 $snippets = array();
 
 $tmp = array(
-    'modExtra' => array(
-        'file' => 'modextra',
+    'dropCalendar' => array(
+        'file' => 'dropcalendar',
         'description' => '',
     ),
 );
