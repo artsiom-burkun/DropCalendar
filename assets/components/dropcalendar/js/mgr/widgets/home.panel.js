@@ -26,7 +26,7 @@ dropCalendar.panel.Home = function (config) {
                     html: _('dropcalendar_intro_msg'),
                     cls: 'panel-desc',
                 }, {
-                    xtype: 'dropcalendar-grid-items',
+                    xtype: 'dropcalendar-grid-events',
                     cls: 'main-wrapper',
                 }]
             }]

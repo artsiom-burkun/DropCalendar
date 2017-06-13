@@ -9,7 +9,6 @@ class dropCalendarHomeManagerController extends dropCalendarManagerController
     /** @var dropCalendar $dropCalendar */
     public $dropCalendar;
 
-
     /**
      *
      */
@@ -59,7 +58,7 @@ class dropCalendarHomeManagerController extends dropCalendarManagerController
         $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/dropcalendar.js');
         $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/misc/utils.js');
         $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/misc/combo.js');
-        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/widgets/items.grid.js');
+        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/widgets/events.grid.js');
         $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/widgets/items.windows.js');
         $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/widgets/home.panel.js');
         $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/sections/home.js');

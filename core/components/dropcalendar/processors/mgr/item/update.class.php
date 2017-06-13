@@ -30,7 +30,7 @@ class dropCalendarItemUpdateProcessor extends modObjectUpdateProcessor
     public function beforeSet()
     {
         $id = (int)$this->getProperty('id');
-        $name = trim($this->getProperty('name'));
+        $name = trim($this->getProperty('title'));
         if (empty($id)) {
             return $this->modx->lexicon('dropcalendar_item_err_ns');
         }

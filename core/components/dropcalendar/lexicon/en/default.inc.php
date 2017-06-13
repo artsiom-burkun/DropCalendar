@@ -2,27 +2,42 @@
 include_once 'setting.inc.php';
 
 $_lang['dropcalendar'] = 'dropCalendar';
-$_lang['dropcalendar_menu_desc'] = 'A sample Extra to develop from.';
+$_lang['dropcalendar_menu_desc'] = 'Fullcalendar event management';
 $_lang['dropcalendar_intro_msg'] = 'You can select multiple items by holding Shift or Ctrl button.';
 
-$_lang['dropcalendar_items'] = 'Items';
-$_lang['dropcalendar_item_id'] = 'Id';
-$_lang['dropcalendar_item_name'] = 'Name';
+$_lang['dropcalendar_items'] = 'Events';
+
+$_lang['dropcalendar_item_id']          = 'Id';
+$_lang['dropcalendar_item_title']       = 'Title';
+$_lang['dropcalendar_item_start']       = 'Start';
+$_lang['dropcalendar_item_end']         = 'End';
+$_lang['dropcalendar_item_mesto']       = 'Place';
+$_lang['dropcalendar_item_prim']        = 'Notes';
+$_lang['dropcalendar_item_className']   = 'Type';
+
 $_lang['dropcalendar_item_description'] = 'Description';
-$_lang['dropcalendar_item_active'] = 'Active';
+$_lang['dropcalendar_item_active']      = 'Active';
 
-$_lang['dropcalendar_item_create'] = 'Create Item';
-$_lang['dropcalendar_item_update'] = 'Update Item';
-$_lang['dropcalendar_item_enable'] = 'Enable Item';
-$_lang['dropcalendar_items_enable'] = 'Enable Items';
-$_lang['dropcalendar_item_disable'] = 'Disable Item';
-$_lang['dropcalendar_items_disable'] = 'Disable Items';
-$_lang['dropcalendar_item_remove'] = 'Remove Item';
-$_lang['dropcalendar_items_remove'] = 'Remove Items';
-$_lang['dropcalendar_item_remove_confirm'] = 'Are you sure you want to remove this Item?';
-$_lang['dropcalendar_items_remove_confirm'] = 'Are you sure you want to remove this Items?';
+$_lang['dropcalendar_item_type_green']  = 'Training';
+$_lang['dropcalendar_item_type_blue']   = 'Game';
+$_lang['dropcalendar_item_type_purple'] = 'Championship';
+$_lang['dropcalendar_item_type_orange'] = 'Party';
+$_lang['dropcalendar_item_type_yellow'] = 'Birthday';
+$_lang['dropcalendar_item_type_teal']   = 'Parent meeting';
+$_lang['dropcalendar_item_type_beige']  = 'Trip';
 
-$_lang['dropcalendar_item_err_name'] = 'You must specify the name of Item.';
+$_lang['dropcalendar_item_create'] = 'Create Event';
+$_lang['dropcalendar_item_update'] = 'Update Event';
+$_lang['dropcalendar_item_enable'] = 'Enable Event';
+$_lang['dropcalendar_items_enable'] = 'Enable Events';
+$_lang['dropcalendar_item_disable'] = 'Disable Event';
+$_lang['dropcalendar_items_disable'] = 'Disable Events';
+$_lang['dropcalendar_item_remove'] = 'Remove Event';
+$_lang['dropcalendar_items_remove'] = 'Remove Events';
+$_lang['dropcalendar_item_remove_confirm'] = 'Are you sure you want to remove this Event?';
+$_lang['dropcalendar_items_remove_confirm'] = 'Are you sure you want to remove this Event?';
+
+$_lang['dropcalendar_item_err_name'] = 'You must specify the title of Event.';
 $_lang['dropcalendar_item_err_ae'] = 'An Item already exists with that name.';
 $_lang['dropcalendar_item_err_nf'] = 'Item not found.';
 $_lang['dropcalendar_item_err_ns'] = 'Item not specified.';

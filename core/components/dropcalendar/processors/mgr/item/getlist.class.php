@@ -35,8 +35,8 @@ class dropCalendarItemGetListProcessor extends modObjectGetListProcessor
         $query = trim($this->getProperty('query'));
         if ($query) {
             $c->where(array(
-                'name:LIKE' => "%{$query}%",
-                'OR:description:LIKE' => "%{$query}%",
+                'title:LIKE' => "%{$query}%",
+                'OR:prim:LIKE' => "%{$query}%",
             ));
         }
 

@@ -1,7 +1,7 @@
-dropCalendar.grid.Items = function (config) {
+dropCalendar.grid.Events = function (config) {
     config = config || {};
     if (!config.id) {
-        config.id = 'dropcalendar-grid-items';
+        config.id = 'dropcalendar-grid-events';
     }
     Ext.applyIf(config, {
         url: dropCalendar.config.connector_url,
@@ -34,7 +34,7 @@ dropCalendar.grid.Items = function (config) {
         remoteSort: true,
         autoHeight: true,
     });
-    dropCalendar.grid.Items.superclass.constructor.call(this, config);
+    dropCalendar.grid.Events.superclass.constructor.call(this, config);
 
     // Clear selection on grid refresh
     this.store.on('load', function () {
@@ -43,7 +43,7 @@ dropCalendar.grid.Items = function (config) {
         }
     }, this);
 };
-Ext.extend(dropCalendar.grid.Items, MODx.grid.Grid, {
+Ext.extend(dropCalendar.grid.Events, MODx.grid.Grid, {
     windows: {},
 
     getMenu: function (grid, rowIndex) {
@@ -182,7 +182,7 @@ Ext.extend(dropCalendar.grid.Items, MODx.grid.Grid, {
     },
 
     getFields: function () {
-        return ['id', 'name', 'description', 'active', 'actions'];
+        return ['id', 'title', 'start', 'end', 'mesto', 'prim', 'className', 'active', 'actions'];
     },
 
     getColumns: function () {
@@ -190,29 +190,49 @@ Ext.extend(dropCalendar.grid.Items, MODx.grid.Grid, {
             header: _('dropcalendar_item_id'),
             dataIndex: 'id',
             sortable: true,
-            width: 70
+            width: 50
         }, {
-            header: _('dropcalendar_item_name'),
-            dataIndex: 'name',
+            header: _('dropcalendar_item_title'),
+            dataIndex: 'title',
             sortable: true,
             width: 200,
         }, {
-            header: _('dropcalendar_item_description'),
-            dataIndex: 'description',
+            header: _('dropcalendar_item_start'),
+            dataIndex: 'start',
             sortable: false,
-            width: 250,
+            width: 120,
+        }, {
+            header: _('dropcalendar_item_end'),
+            dataIndex: 'end',
+            sortable: false,
+            width: 120,
+        }, {
+            header: _('dropcalendar_item_mesto'),
+            dataIndex: 'mesto',
+            sortable: false,
+            width: 150,
+        }, {
+            header: _('dropcalendar_item_prim'),
+            dataIndex: 'prim',
+            sortable: false,
+            width: 200,
+        }, {
+            header: _('dropcalendar_item_className'),
+            dataIndex: 'className',
+            sortable: false,
+            width: 100,
         }, {
             header: _('dropcalendar_item_active'),
             dataIndex: 'active',
             renderer: dropCalendar.utils.renderBoolean,
             sortable: true,
-            width: 100,
+            width: 70,
         }, {
             header: _('dropcalendar_grid_actions'),
             dataIndex: 'actions',
             renderer: dropCalendar.utils.renderActions,
             sortable: false,
-            width: 100,
+            width: 120,
             id: 'actions'
         }];
     },
@@ -284,4 +304,4 @@ Ext.extend(dropCalendar.grid.Items, MODx.grid.Grid, {
         this.getBottomToolbar().changePage(1);
     },
 });
-Ext.reg('dropcalendar-grid-items', dropCalendar.grid.Items);
+Ext.reg('dropcalendar-grid-events', dropCalendar.grid.Events);
