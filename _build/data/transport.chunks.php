@@ -9,10 +9,6 @@ $tmp = array(
         'file' => 'item',
         'description' => '',
     ),
-    'tpl.dropCalendar.office' => array(
-        'file' => 'office',
-        'description' => '',
-    ),
 );
 
 // Save chunks for setup options

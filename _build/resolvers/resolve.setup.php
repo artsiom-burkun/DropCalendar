@@ -123,9 +123,11 @@ if (!function_exists('downloadPackage')) {
     }
 }
 
+/*
 $packages = array(
     'pdoTools' => '2.5.0-pl',
 );
+*/
 $success = false;
 
 /** @var xPDOTransport $transport */
