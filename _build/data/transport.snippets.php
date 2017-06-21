@@ -5,8 +5,12 @@
 $snippets = array();
 
 $tmp = array(
-    'dropCalendar' => array(
-        'file' => 'dropcalendar',
+    'ManageEvents' => array(
+        'file' => 'manageevents',
+        'description' => '',
+    ),
+    'ShowTable' => array(
+        'file' => 'showtable',
         'description' => '',
     ),
 );

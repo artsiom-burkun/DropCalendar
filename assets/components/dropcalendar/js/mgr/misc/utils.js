@@ -1,10 +1,10 @@
-dropCalendar.utils.renderBoolean = function (value) {
+DropCalendar.utils.renderBoolean = function (value) {
     return value
         ? String.format('<span class="green">{0}</span>', _('yes'))
         : String.format('<span class="red">{0}</span>', _('no'));
 };
 
-dropCalendar.utils.getMenu = function (actions, grid, selected) {
+DropCalendar.utils.getMenu = function (actions, grid, selected) {
     var menu = [];
     var cls, icon, title, action;
 
@@ -60,7 +60,7 @@ dropCalendar.utils.getMenu = function (actions, grid, selected) {
     return menu;
 };
 
-dropCalendar.utils.renderActions = function (value, props, row) {
+DropCalendar.utils.renderActions = function (value, props, row) {
     var res = [];
     var cls, icon, title, action, item;
     for (var i in row.data.actions) {

@@ -13,7 +13,7 @@ if ($transport->xpdo) {
             $modx->addPackage('dropcalendar', $modelPath);
 
             $manager = $modx->getManager();
-            $objects = array('dropCalendarItem',);
+            $objects = array('DropCalendarItem',);
             $schemaFile = MODX_CORE_PATH . 'components/dropcalendar/model/schema/dropcalendar.mysql.schema.xml';
             if (is_file($schemaFile)) {
                 $schema = new SimpleXMLElement($schemaFile, 0, true);

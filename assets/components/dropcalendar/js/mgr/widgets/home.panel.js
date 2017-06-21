@@ -1,4 +1,4 @@
-dropCalendar.panel.Home = function (config) {
+DropCalendar.panel.Home = function (config) {
     config = config || {};
     Ext.apply(config, {
         baseCls: 'modx-formpanel',
@@ -32,7 +32,7 @@ dropCalendar.panel.Home = function (config) {
             }]
         }]
     });
-    dropCalendar.panel.Home.superclass.constructor.call(this, config);
+    DropCalendar.panel.Home.superclass.constructor.call(this, config);
 };
-Ext.extend(dropCalendar.panel.Home, MODx.Panel);
-Ext.reg('dropcalendar-panel-home', dropCalendar.panel.Home);
+Ext.extend(DropCalendar.panel.Home, MODx.Panel);
+Ext.reg('dropcalendar-panel-home', DropCalendar.panel.Home);

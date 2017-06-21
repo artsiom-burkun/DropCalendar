@@ -1,10 +1,12 @@
 --------------------
-dropCalendar
+DropCalendar
 --------------------
-Author: John Doe <john@doe.com>
+Author: Artsiom Burkun
+Email:  fartunastar_artem@mail.ru
 --------------------
 
-A basic Extra for MODx Revolution.
+A JavaScript event calendar (https://fullcalendar.io/)
+with ajax event management for MODx Revolution.
 
-Feel free to suggest ideas/improvements/bugs on GitHub:
-http://github.com/username/dropCalendar/issues
+Project on GitHub:
+https://github.com/artsiom-burkun/DropCalendar

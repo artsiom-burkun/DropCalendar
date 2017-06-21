@@ -1,4 +1,4 @@
-dropCalendar.page.Home = function (config) {
+DropCalendar.page.Home = function (config) {
     config = config || {};
     Ext.applyIf(config, {
         components: [{
@@ -6,7 +6,7 @@ dropCalendar.page.Home = function (config) {
             renderTo: 'dropcalendar-panel-home-div'
         }]
     });
-    dropCalendar.page.Home.superclass.constructor.call(this, config);
+    DropCalendar.page.Home.superclass.constructor.call(this, config);
 };
-Ext.extend(dropCalendar.page.Home, MODx.Component);
-Ext.reg('dropcalendar-page-home', dropCalendar.page.Home);
+Ext.extend(DropCalendar.page.Home, MODx.Component);
+Ext.reg('dropcalendar-page-home', DropCalendar.page.Home);

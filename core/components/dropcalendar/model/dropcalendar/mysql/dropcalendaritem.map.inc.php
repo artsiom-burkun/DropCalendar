@@ -1,5 +1,5 @@
 <?php
-$xpdo_meta_map['dropCalendarItem']= array (
+$xpdo_meta_map['DropCalendarItem']= array (
   'package' => 'dropcalendar',
   'version' => '1.1',
   'table' => 'dropcalendar_items',

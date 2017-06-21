@@ -1,11 +1,11 @@
 <?php
 /** @var modX $modx */
 /** @var array $scriptProperties */
-/** @var dropCalendar $dropCalendar */
-if (!$dropCalendar = $modx->getService('dropcalendar', 'dropCalendar', $modx->getOption('dropcalendar_core_path', null,
+/** @var DropCalendar $DropCalendar */
+if (!$DropCalendar = $modx->getService('dropcalendar', 'DropCalendar', $modx->getOption('dropcalendar_core_path', null,
         $modx->getOption('core_path') . 'components/dropcalendar/') . 'model/dropcalendar/', $scriptProperties)
 ) {
-    return 'Could not load dropCalendar class!';
+    return 'Could not load DropCalendar class!';
 }
 
 // Do your snippet code here. This demo grabs 5 items from our custom table.
@@ -17,14 +17,14 @@ $outputSeparator = $modx->getOption('outputSeparator', $scriptProperties, "\n");
 $toPlaceholder = $modx->getOption('toPlaceholder', $scriptProperties, false);
 
 // Build query
-$c = $modx->newQuery('dropCalendarItem');
+$c = $modx->newQuery('DropCalendarItem');
 $c->sortby($sortby, $sortdir);
 $c->limit($limit);
-$items = $modx->getIterator('dropCalendarItem', $c);
+$items = $modx->getIterator('DropCalendarItem', $c);
 
 // Iterate through items
 $list = array();
-/** @var dropCalendarItem $item */
+/** @var DropCalendarItem $item */
 foreach ($items as $item) {
     $list[] = $modx->getChunk($tpl, $item->toArray());
 }

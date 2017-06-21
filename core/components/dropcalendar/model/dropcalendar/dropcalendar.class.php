@@ -1,6 +1,6 @@
 <?php
 
-class dropCalendar
+class DropCalendar
 {
     /** @var modX $modx */
     public $modx;
@@ -40,6 +40,69 @@ class dropCalendar
 
         $this->modx->addPackage('dropcalendar', $this->config['modelPath']);
         $this->modx->lexicon->load('dropcalendar:default');
+    }
+
+    public function getEvents() {
+        $q = $this->modx->newQuery('DropCalendarItem');
+        $q->select('id,title,start,end,mesto,prim,className');
+        $q->prepare();
+        $q->stmt->execute();
+        $result = $q->stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = json_encode($result);
+
+        return $result;
+    }
+
+    public function addEvent($title, $start, $end, $mesto, $prim, $className) {
+        $fields = array(
+            'title' => $title,
+            'start' => $start,
+            'end' => $end,
+            'mesto' => $mesto,
+            'prim' => $prim,
+            'className' => $className
+        );
+        $quote = $this->modx->newObject('DropCalendarItem', $fields);
+        $quote->save();
+        $id = $this->modx->lastInsertId();
+
+        return json_encode(array('status'=>'success','eventid'=>$id));
+    }
+
+    public function deleteEvent($id) {
+        $where = array(
+            'id' => $id
+        );
+        $this->modx->removeObject('DropCalendarItem', $where);
+        return json_encode(array('status'=>'success','eventid'=>$id));
+    }
+
+    public function updateEventFull($id, $title, $start, $end, $mesto, $prim, $className) {
+        $u = $this->modx->getObject('DropCalendarItem', array('id'=>$id));
+        $u->set('title', $title);
+        $u->set('start', $start);
+        $u->set('end', $end);
+        $u->set('mesto', $mesto);
+        $u->set('prim', $prim);
+        $u->set('className', $className);
+        if ( $u->save()) {
+            return json_encode(array('status'=>'success','eventid'=>$id));
+        } else {
+            return json_encode(array('status'=>'failure','error'=>'cant save event'));
+        }
+    }
+
+    public function updateEvent($id, $title, $start, $end) {
+        $u = $this->modx->getObject('DropCalendarItem', array('id'=>$id));
+        $u->set('title', $title);
+        $u->set('start', $start);
+        $u->set('end', $end);
+
+        if ( $u->save()) {
+            return json_encode(array('status'=>'success','eventid'=>$id));
+        } else {
+            return json_encode(array('status'=>'failure','error'=>'cant save event'));
+        }
     }
 
 }

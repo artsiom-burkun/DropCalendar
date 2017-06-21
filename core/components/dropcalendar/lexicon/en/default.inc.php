@@ -1,7 +1,7 @@
 <?php
 include_once 'setting.inc.php';
 
-$_lang['dropcalendar'] = 'dropCalendar';
+$_lang['dropcalendar'] = 'DropCalendar';
 $_lang['dropcalendar_menu_desc'] = 'Fullcalendar event management';
 $_lang['dropcalendar_intro_msg'] = 'You can select multiple items by holding Shift or Ctrl button.';
 

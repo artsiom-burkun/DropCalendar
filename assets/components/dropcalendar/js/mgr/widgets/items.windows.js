@@ -1,4 +1,4 @@
-dropCalendar.window.CreateItem = function (config) {
+DropCalendar.window.CreateItem = function (config) {
     config = config || {};
     if (!config.id) {
         config.id = 'dropcalendar-item-window-create';
@@ -7,7 +7,7 @@ dropCalendar.window.CreateItem = function (config) {
         title: _('dropcalendar_item_create'),
         width: 550,
         autoHeight: true,
-        url: dropCalendar.config.connector_url,
+        url: DropCalendar.config.connector_url,
         action: 'mgr/item/create',
         fields: this.getFields(config),
         keys: [{
@@ -16,9 +16,9 @@ dropCalendar.window.CreateItem = function (config) {
             }, scope: this
         }]
     });
-    dropCalendar.window.CreateItem.superclass.constructor.call(this, config);
+    DropCalendar.window.CreateItem.superclass.constructor.call(this, config);
 };
-Ext.extend(dropCalendar.window.CreateItem, MODx.Window, {
+Ext.extend(DropCalendar.window.CreateItem, MODx.Window, {
 
     getFields: function (config) {
         return [{
@@ -105,10 +105,10 @@ Ext.extend(dropCalendar.window.CreateItem, MODx.Window, {
     }
 
 });
-Ext.reg('dropcalendar-item-window-create', dropCalendar.window.CreateItem);
+Ext.reg('dropcalendar-item-window-create', DropCalendar.window.CreateItem);
 
 
-dropCalendar.window.UpdateItem = function (config) {
+DropCalendar.window.UpdateItem = function (config) {
     config = config || {};
     if (!config.id) {
         config.id = 'dropcalendar-item-window-update';
@@ -117,7 +117,7 @@ dropCalendar.window.UpdateItem = function (config) {
         title: _('dropcalendar_item_update'),
         width: 650,
         autoHeight: true,
-        url: dropCalendar.config.connector_url,
+        url: DropCalendar.config.connector_url,
         action: 'mgr/item/update',
         fields: this.getFields(config),
         keys: [{
@@ -126,9 +126,9 @@ dropCalendar.window.UpdateItem = function (config) {
             }, scope: this
         }]
     });
-    dropCalendar.window.UpdateItem.superclass.constructor.call(this, config);
+    DropCalendar.window.UpdateItem.superclass.constructor.call(this, config);
 };
-Ext.extend(dropCalendar.window.UpdateItem, MODx.Window, {
+Ext.extend(DropCalendar.window.UpdateItem, MODx.Window, {
 
     getFields: function (config) {
         return [
@@ -221,4 +221,4 @@ Ext.extend(dropCalendar.window.UpdateItem, MODx.Window, {
     }
 
 });
-Ext.reg('dropcalendar-item-window-update', dropCalendar.window.UpdateItem);
+Ext.reg('dropcalendar-item-window-update', DropCalendar.window.UpdateItem);

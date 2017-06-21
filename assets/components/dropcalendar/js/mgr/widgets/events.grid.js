@@ -1,10 +1,10 @@
-dropCalendar.grid.Events = function (config) {
+DropCalendar.grid.Events = function (config) {
     config = config || {};
     if (!config.id) {
         config.id = 'dropcalendar-grid-events';
     }
     Ext.applyIf(config, {
-        url: dropCalendar.config.connector_url,
+        url: DropCalendar.config.connector_url,
         fields: this.getFields(config),
         columns: this.getColumns(config),
         tbar: this.getTopBar(config),
@@ -34,7 +34,7 @@ dropCalendar.grid.Events = function (config) {
         remoteSort: true,
         autoHeight: true,
     });
-    dropCalendar.grid.Events.superclass.constructor.call(this, config);
+    DropCalendar.grid.Events.superclass.constructor.call(this, config);
 
     // Clear selection on grid refresh
     this.store.on('load', function () {
@@ -43,14 +43,14 @@ dropCalendar.grid.Events = function (config) {
         }
     }, this);
 };
-Ext.extend(dropCalendar.grid.Events, MODx.grid.Grid, {
+Ext.extend(DropCalendar.grid.Events, MODx.grid.Grid, {
     windows: {},
 
     getMenu: function (grid, rowIndex) {
         var ids = this._getSelectedIds();
 
         var row = grid.getStore().getAt(rowIndex);
-        var menu = dropCalendar.utils.getMenu(row.data['actions'], this, ids);
+        var menu = DropCalendar.utils.getMenu(row.data['actions'], this, ids);
 
         this.addContextMenuItem(menu);
     },
@@ -224,13 +224,13 @@ Ext.extend(dropCalendar.grid.Events, MODx.grid.Grid, {
         }, {
             header: _('dropcalendar_item_active'),
             dataIndex: 'active',
-            renderer: dropCalendar.utils.renderBoolean,
+            renderer: DropCalendar.utils.renderBoolean,
             sortable: true,
             width: 70,
         }, {
             header: _('dropcalendar_grid_actions'),
             dataIndex: 'actions',
-            renderer: dropCalendar.utils.renderActions,
+            renderer: DropCalendar.utils.renderActions,
             sortable: false,
             width: 120,
             id: 'actions'
@@ -304,4 +304,4 @@ Ext.extend(dropCalendar.grid.Events, MODx.grid.Grid, {
         this.getBottomToolbar().changePage(1);
     },
 });
-Ext.reg('dropcalendar-grid-events', dropCalendar.grid.Events);
+Ext.reg('dropcalendar-grid-events', DropCalendar.grid.Events);

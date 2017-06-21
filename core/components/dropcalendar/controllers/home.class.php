@@ -1,13 +1,13 @@
 <?php
 
 /**
- * The home manager controller for dropCalendar.
+ * The home manager controller for DropCalendar.
  *
  */
-class dropCalendarHomeManagerController extends dropCalendarManagerController
+class DropCalendarHomeManagerController extends DropCalendarManagerController
 {
-    /** @var dropCalendar $dropCalendar */
-    public $dropCalendar;
+    /** @var DropCalendar $DropCalendar */
+    public $DropCalendar;
 
     /**
      *
@@ -16,7 +16,7 @@ class dropCalendarHomeManagerController extends dropCalendarManagerController
     {
         $path = $this->modx->getOption('dropcalendar_core_path', null,
                 $this->modx->getOption('core_path') . 'components/dropcalendar/') . 'model/dropcalendar/';
-        $this->dropCalendar = $this->modx->getService('dropcalendar', 'dropCalendar', $path);
+        $this->DropCalendar = $this->modx->getService('dropcalendar', 'DropCalendar', $path);
         parent::initialize();
     }
 
@@ -53,19 +53,19 @@ class dropCalendarHomeManagerController extends dropCalendarManagerController
      */
     public function loadCustomCssJs()
     {
-        $this->addCss($this->dropCalendar->config['cssUrl'] . 'mgr/main.css');
-        $this->addCss($this->dropCalendar->config['cssUrl'] . 'mgr/bootstrap.buttons.css');
-        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/dropcalendar.js');
-        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/misc/utils.js');
-        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/misc/combo.js');
-        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/widgets/events.grid.js');
-        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/widgets/items.windows.js');
-        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/widgets/home.panel.js');
-        $this->addJavascript($this->dropCalendar->config['jsUrl'] . 'mgr/sections/home.js');
+        $this->addCss($this->DropCalendar->config['cssUrl'] . 'mgr/main.css');
+        $this->addCss($this->DropCalendar->config['cssUrl'] . 'mgr/bootstrap.buttons.css');
+        $this->addJavascript($this->DropCalendar->config['jsUrl'] . 'mgr/dropcalendar.js');
+        $this->addJavascript($this->DropCalendar->config['jsUrl'] . 'mgr/misc/utils.js');
+        $this->addJavascript($this->DropCalendar->config['jsUrl'] . 'mgr/misc/combo.js');
+        $this->addJavascript($this->DropCalendar->config['jsUrl'] . 'mgr/widgets/events.grid.js');
+        $this->addJavascript($this->DropCalendar->config['jsUrl'] . 'mgr/widgets/items.windows.js');
+        $this->addJavascript($this->DropCalendar->config['jsUrl'] . 'mgr/widgets/home.panel.js');
+        $this->addJavascript($this->DropCalendar->config['jsUrl'] . 'mgr/sections/home.js');
 
         $this->addHtml('<script type="text/javascript">
-        dropCalendar.config = ' . json_encode($this->dropCalendar->config) . ';
-        dropCalendar.config.connector_url = "' . $this->dropCalendar->config['connectorUrl'] . '";
+        DropCalendar.config = ' . json_encode($this->DropCalendar->config) . ';
+        DropCalendar.config.connector_url = "' . $this->DropCalendar->config['connectorUrl'] . '";
         Ext.onReady(function() {
             MODx.load({ xtype: "dropcalendar-page-home"});
         });
@@ -79,6 +79,6 @@ class dropCalendarHomeManagerController extends dropCalendarManagerController
      */
     public function getTemplateFile()
     {
-        return $this->dropCalendar->config['templatesPath'] . 'home.tpl';
+        return $this->DropCalendar->config['templatesPath'] . 'home.tpl';
     }
 }

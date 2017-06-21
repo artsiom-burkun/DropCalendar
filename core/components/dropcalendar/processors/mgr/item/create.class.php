@@ -1,9 +1,9 @@
 <?php
 
-class dropCalendarItemCreateProcessor extends modObjectCreateProcessor
+class DropCalendarItemCreateProcessor extends modObjectCreateProcessor
 {
-    public $objectType = 'dropCalendarItem';
-    public $classKey = 'dropCalendarItem';
+    public $objectType = 'DropCalendarItem';
+    public $classKey = 'DropCalendarItem';
     public $languageTopics = array('dropcalendar');
     //public $permission = 'create';
 
@@ -25,4 +25,4 @@ class dropCalendarItemCreateProcessor extends modObjectCreateProcessor
 
 }
 
-return 'dropCalendarItemCreateProcessor';
+return 'DropCalendarItemCreateProcessor';

@@ -1,6 +1,6 @@
-## dropCalendar
+## DropCalendar
 
-dropCalendar is a base Extra template that is useful when wanting to create a new
+DropCalendar is a base Extra template that is useful when wanting to create a new
 Extra for MODx Revolution. One can git archive from this repository to start
 with all the file structure for beginning MODx Extra development pre-setup.
 
@@ -8,11 +8,11 @@ with all the file structure for beginning MODx Extra development pre-setup.
 
 First, clone this repository somewhere on your development machine:
 
-`git clone http://github.com/bezumkin/dropCalendar.git ./`
+`git clone http://github.com/bezumkin/DropCalendar.git ./`
 
 Then, create the target directory where you want to create the file.
 
-Then, navigate to the directory dropCalendar is now in, and do this:
+Then, navigate to the directory DropCalendar is now in, and do this:
 
 `git archive HEAD | (cd /path/where/I/want/my/new/repo/ && tar -xvf -)`
 
@@ -24,8 +24,8 @@ there!
 
 ## Configuration
 
-Now, you'll want to change references to dropCalendar in the files in your
-new copied-from-dropCalendar repo to whatever name of your new Extra will be. Once
+Now, you'll want to change references to DropCalendar in the files in your
+new copied-from-DropCalendar repo to whatever name of your new Extra will be. Once
 you've done that, you can create some System Settings:
 
 - 'mynamespace.core_path' - Point to /path/to/my/extra/core/components/extra/
@@ -46,12 +46,12 @@ functionality. This Extra contains files and the setup to do the following:
 If you do not require all of this functionality, simply remove it and change the
 appropriate code.
 
-Also, you'll want to change all the references of 'dropCalendar' to whatever the
+Also, you'll want to change all the references of 'DropCalendar' to whatever the
 name of your component is.
 
 ## Copyright Information
 
-dropCalendar is distributed as GPL (as MODx Revolution is), but the copyright owner
-(Shaun McCormick) grants all users of dropCalendar the ability to modify, distribute
-and use dropCalendar in MODx development as they see fit, as long as attribution
+DropCalendar is distributed as GPL (as MODx Revolution is), but the copyright owner
+(Shaun McCormick) grants all users of DropCalendar the ability to modify, distribute
+and use DropCalendar in MODx development as they see fit, as long as attribution
 is given somewhere in the distributed source of all derivative works.

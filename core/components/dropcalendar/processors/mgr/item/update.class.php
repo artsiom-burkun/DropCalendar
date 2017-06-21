@@ -1,9 +1,9 @@
 <?php
 
-class dropCalendarItemUpdateProcessor extends modObjectUpdateProcessor
+class DropCalendarItemUpdateProcessor extends modObjectUpdateProcessor
 {
-    public $objectType = 'dropCalendarItem';
-    public $classKey = 'dropCalendarItem';
+    public $objectType = 'DropCalendarItem';
+    public $classKey = 'DropCalendarItem';
     public $languageTopics = array('dropcalendar');
     //public $permission = 'save';
 
@@ -45,4 +45,4 @@ class dropCalendarItemUpdateProcessor extends modObjectUpdateProcessor
     }
 }
 
-return 'dropCalendarItemUpdateProcessor';
+return 'DropCalendarItemUpdateProcessor';

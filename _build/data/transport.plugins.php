@@ -5,7 +5,7 @@
 $plugins = array();
 
 $tmp = array(/*
-    'dropCalendar' => array(
+    'DropCalendar' => array(
         'file' => 'dropcalendar',
         'description' => '',
         'events' => array(

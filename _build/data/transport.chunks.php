@@ -5,7 +5,7 @@
 $chunks = array();
 
 $tmp = array(
-    'tpl.dropCalendar.item' => array(
+    'eventsTpl' => array(
         'file' => 'item',
         'description' => '',
     ),

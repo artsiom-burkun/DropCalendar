@@ -1,4 +1,4 @@
-dropCalendar.combo.Search = function (config) {
+DropCalendar.combo.Search = function (config) {
     config = config || {};
     Ext.applyIf(config, {
         xtype: 'twintrigger',
@@ -13,7 +13,7 @@ dropCalendar.combo.Search = function (config) {
         onTrigger1Click: this._triggerSearch,
         onTrigger2Click: this._triggerClear,
     });
-    dropCalendar.combo.Search.superclass.constructor.call(this, config);
+    DropCalendar.combo.Search.superclass.constructor.call(this, config);
     this.on('render', function () {
         this.getEl().addKeyListener(Ext.EventObject.ENTER, function () {
             this._triggerSearch();
@@ -21,7 +21,7 @@ dropCalendar.combo.Search = function (config) {
     });
     this.addEvents('clear', 'search');
 };
-Ext.extend(dropCalendar.combo.Search, Ext.form.TwinTriggerField, {
+Ext.extend(DropCalendar.combo.Search, Ext.form.TwinTriggerField, {
 
     initComponent: function () {
         Ext.form.TwinTriggerField.superclass.initComponent.call(this);
@@ -44,5 +44,5 @@ Ext.extend(dropCalendar.combo.Search, Ext.form.TwinTriggerField, {
     },
 
 });
-Ext.reg('dropcalendar-combo-search', dropCalendar.combo.Search);
-Ext.reg('dropcalendar-field-search', dropCalendar.combo.Search);
+Ext.reg('dropcalendar-combo-search', DropCalendar.combo.Search);
+Ext.reg('dropcalendar-field-search', DropCalendar.combo.Search);

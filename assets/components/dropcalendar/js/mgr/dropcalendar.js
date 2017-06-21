@@ -1,10 +1,10 @@
-var dropCalendar = function (config) {
+var DropCalendar = function (config) {
     config = config || {};
-    dropCalendar.superclass.constructor.call(this, config);
+    DropCalendar.superclass.constructor.call(this, config);
 };
-Ext.extend(dropCalendar, Ext.Component, {
+Ext.extend(DropCalendar, Ext.Component, {
     page: {}, window: {}, grid: {}, tree: {}, panel: {}, combo: {}, config: {}, view: {}, utils: {}
 });
-Ext.reg('dropcalendar', dropCalendar);
+Ext.reg('dropcalendar', DropCalendar);
 
-dropCalendar = new dropCalendar();
+DropCalendar = new DropCalendar();

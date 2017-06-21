@@ -1,2 +1,2 @@
 <?php
-class dropCalendarItem extends xPDOSimpleObject {}
+class DropCalendarItem extends xPDOSimpleObject {}

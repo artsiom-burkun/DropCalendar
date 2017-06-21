@@ -1,9 +1,9 @@
 <?php
 
-class dropCalendarItemGetListProcessor extends modObjectGetListProcessor
+class DropCalendarItemGetListProcessor extends modObjectGetListProcessor
 {
-    public $objectType = 'dropCalendarItem';
-    public $classKey = 'dropCalendarItem';
+    public $objectType = 'DropCalendarItem';
+    public $classKey = 'DropCalendarItem';
     public $defaultSortField = 'id';
     public $defaultSortDirection = 'DESC';
     //public $permission = 'list';
@@ -103,4 +103,4 @@ class dropCalendarItemGetListProcessor extends modObjectGetListProcessor
 
 }
 
-return 'dropCalendarItemGetListProcessor';
+return 'DropCalendarItemGetListProcessor';

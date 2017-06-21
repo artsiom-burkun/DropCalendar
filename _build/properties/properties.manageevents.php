@@ -5,11 +5,11 @@ $properties = array();
 $tmp = array(
     'tpl' => array(
         'type' => 'textfield',
-        'value' => 'tpl.dropCalendar.item',
+        'value' => 'tpl.DropCalendar.item',
     ),
     'sortby' => array(
         'type' => 'textfield',
-        'value' => 'name',
+        'value' => 'title',
     ),
     'sortdir' => array(
         'type' => 'list',

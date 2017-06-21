@@ -1,7 +1,7 @@
 <?php
 
 // define package
-define('PKG_NAME', 'dropCalendar');
+define('PKG_NAME', 'DropCalendar');
 define('PKG_NAME_LOWER', strtolower(PKG_NAME));
 
 define('PKG_VERSION', '1.0.0');

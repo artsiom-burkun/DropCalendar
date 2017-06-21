@@ -1,7 +1,7 @@
 <?php
 include_once 'setting.inc.php';
 
-$_lang['dropcalendar'] = 'dropCalendar';
+$_lang['dropcalendar'] = 'DropCalendar';
 $_lang['dropcalendar_menu_desc'] = 'Удобный календарь с внешними событиями';
 $_lang['dropcalendar_intro_msg'] = 'Вы можете выделять сразу несколько предметов при помощи Shift или Ctrl.';
 

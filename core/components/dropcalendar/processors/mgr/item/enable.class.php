@@ -1,9 +1,9 @@
 <?php
 
-class dropCalendarItemEnableProcessor extends modObjectProcessor
+class DropCalendarItemEnableProcessor extends modObjectProcessor
 {
-    public $objectType = 'dropCalendarItem';
-    public $classKey = 'dropCalendarItem';
+    public $objectType = 'DropCalendarItem';
+    public $classKey = 'DropCalendarItem';
     public $languageTopics = array('dropcalendar');
     //public $permission = 'save';
 
@@ -23,7 +23,7 @@ class dropCalendarItemEnableProcessor extends modObjectProcessor
         }
 
         foreach ($ids as $id) {
-            /** @var dropCalendarItem $object */
+            /** @var DropCalendarItem $object */
             if (!$object = $this->modx->getObject($this->classKey, $id)) {
                 return $this->failure($this->modx->lexicon('dropcalendar_item_err_nf'));
             }
@@ -37,4 +37,4 @@ class dropCalendarItemEnableProcessor extends modObjectProcessor
 
 }
 
-return 'dropCalendarItemEnableProcessor';
+return 'DropCalendarItemEnableProcessor';
