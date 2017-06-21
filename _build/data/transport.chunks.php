@@ -5,8 +5,16 @@
 $chunks = array();
 
 $tmp = array(
-    'eventsTpl' => array(
-        'file' => 'item',
+    'eventsManagementTpl' => array(
+        'file' => 'events',
+        'description' => '',
+    ),
+    'eventsWindowPopup' => array(
+        'file' => 'window',
+        'description' => '',
+    ),
+    'eventTableHead' => array(
+        'file' => 'head',
         'description' => '',
     ),
 );

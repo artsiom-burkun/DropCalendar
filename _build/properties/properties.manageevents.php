@@ -5,31 +5,31 @@ $properties = array();
 $tmp = array(
     'tpl' => array(
         'type' => 'textfield',
-        'value' => 'tpl.DropCalendar.item',
+        'value' => 'eventsManagementTpl',
     ),
-    'sortby' => array(
+    'popupWindow' => array(
         'type' => 'textfield',
-        'value' => 'title',
+        'value' => 'eventsWindowPopup',
     ),
-    'sortdir' => array(
-        'type' => 'list',
-        'options' => array(
-            array('text' => 'ASC', 'value' => 'ASC'),
-            array('text' => 'DESC', 'value' => 'DESC'),
-        ),
-        'value' => 'ASC',
-    ),
-    'limit' => array(
+    'calendarNumber' => array(
         'type' => 'numberfield',
-        'value' => 10,
+        'value' => 1,
     ),
-    'outputSeparator' => array(
-        'type' => 'textfield',
-        'value' => "\n",
-    ),
-    'toPlaceholder' => array(
+    'useJquery' => array(
         'type' => 'combo-boolean',
-        'value' => false,
+        'value' => true,
+    ),
+    'useJqueryUi' => array(
+        'type' => 'combo-boolean',
+        'value' => true,
+    ),
+    'useFullcalendar' => array(
+        'type' => 'combo-boolean',
+        'value' => true,
+    ),
+    'useBootstrap' => array(
+        'type' => 'combo-boolean',
+        'value' => true,
     ),
 );
 

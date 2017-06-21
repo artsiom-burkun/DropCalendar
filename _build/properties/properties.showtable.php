@@ -5,31 +5,27 @@ $properties = array();
 $tmp = array(
     'tpl' => array(
         'type' => 'textfield',
-        'value' => 'tpl.DropCalendar.item',
+        'value' => 'eventTableTpl',
     ),
-    'sortby' => array(
+    'tplHead' => array(
         'type' => 'textfield',
-        'value' => 'title',
+        'value' => 'eventTableHead',
     ),
-    'sortdir' => array(
-        'type' => 'list',
-        'options' => array(
-            array('text' => 'ASC', 'value' => 'ASC'),
-            array('text' => 'DESC', 'value' => 'DESC'),
-        ),
-        'value' => 'ASC',
+    'popupWindow' => array(
+        'type' => 'textfield',
+        'value' => 'eventsWindowPopup',
     ),
-    'limit' => array(
+    'calendarNumber' => array(
         'type' => 'numberfield',
-        'value' => 10,
+        'value' => 1,
     ),
-    'outputSeparator' => array(
-        'type' => 'textfield',
-        'value' => "\n",
-    ),
-    'toPlaceholder' => array(
+    'useJquery' => array(
         'type' => 'combo-boolean',
-        'value' => false,
+        'value' => true,
+    ),
+    'useBootstrap' => array(
+        'type' => 'combo-boolean',
+        'value' => true,
     ),
 );
 

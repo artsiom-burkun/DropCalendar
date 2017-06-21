@@ -14,5 +14,6 @@ $modx->regClientScript($modx->config['assets_url']."components/dropcalendar/js/w
 $modx->regClientScript($modx->config['assets_url']."components/dropcalendar/js/web/locale/ru.js");          //
 
 
-$output = $modx->getChunk('eventsTpl');
+$output = $modx->getChunk($scriptProperties['eventsManagementTpl']);
+$output .= $modx->getChunk($scriptProperties['eventsWindowPopup']);
 return $output;
