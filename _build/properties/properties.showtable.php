@@ -11,10 +11,6 @@ $tmp = array(
         'type' => 'textfield',
         'value' => 'eventTableHead',
     ),
-    'popupWindow' => array(
-        'type' => 'textfield',
-        'value' => 'eventsWindowPopup',
-    ),
     'calendarNumber' => array(
         'type' => 'numberfield',
         'value' => 1,

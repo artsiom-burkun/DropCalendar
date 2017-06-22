@@ -8,34 +8,42 @@ if (!$DropCalendar = $modx->getService('dropcalendar', 'DropCalendar', $modx->ge
     return 'Could not load DropCalendar class!';
 }
 
-// Do your snippet code here. This demo grabs 5 items from our custom table.
-$tpl = $modx->getOption('tpl', $scriptProperties, 'Item');
-$sortby = $modx->getOption('sortby', $scriptProperties, 'name');
-$sortdir = $modx->getOption('sortbir', $scriptProperties, 'ASC');
-$limit = $modx->getOption('limit', $scriptProperties, 5);
-$outputSeparator = $modx->getOption('outputSeparator', $scriptProperties, "\n");
-$toPlaceholder = $modx->getOption('toPlaceholder', $scriptProperties, false);
+
+$assetsUrl = $modx->config['assets_url'];
+$scriptProperties['useBootstrap'] ? $modx->regClientCSS($assetsUrl."components/dropcalendar/css/web/bootstrap.min.css") : '';
+$scriptProperties['useBootstrap'] ? $modx->regClientCSS($assetsUrl."components/dropcalendar/css/web/bootstrap-theme.css") : '';
+
+$scriptProperties['useJquery'] ? $modx->regClientStartupScript($assetsUrl."components/dropcalendar/js/web/jquery.min.js") : '';     // <!-- jQuery v3.2.1         -->
+$scriptProperties['useBootstrap'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/bootstrap.min.js") : '';      // <!-- Bootstrap v3.3.7      -->
+
 
 // Build query
 $c = $modx->newQuery('DropCalendarItem');
-$c->sortby($sortby, $sortdir);
-$c->limit($limit);
 $items = $modx->getIterator('DropCalendarItem', $c);
+
+
 
 // Iterate through items
 $list = array();
 /** @var DropCalendarItem $item */
 foreach ($items as $item) {
-    $list[] = $modx->getChunk($tpl, $item->toArray());
+    $list[] = $modx->getChunk($scriptProperties['tpl'], $item->toArray());
 }
 
 // Output
-$output = implode($outputSeparator, $list);
+$output = $modx->getChunk($scriptProperties['tplHead']);
+
+$output .= implode($outputSeparator, $list);
 if (!empty($toPlaceholder)) {
     // If using a placeholder, output nothing and set output to specified placeholder
     $modx->setPlaceholder($toPlaceholder, $output);
 
     return '';
 }
+
+$output .= '</tbody></table>';
+
+
+
 // By default just return output
 return $output;

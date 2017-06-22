@@ -17,6 +17,10 @@ $tmp = array(
         'file' => 'head',
         'description' => '',
     ),
+    'eventTableTpl' => array(
+        'file' => 'table',
+        'description' => '',
+    ),
 );
 
 // Save chunks for setup options

@@ -1,19 +1,31 @@
 <?php
-$modx->regClientCSS($modx->config['assets_url']."components/dropcalendar/css/web/fullcalendar.min.css");
-$modx->regClientCSS($modx->config['assets_url']."components/dropcalendar/css/web/bootstrap.min.css");
-$modx->regClientCSS($modx->config['assets_url']."components/dropcalendar/css/web/bootstrap-theme.css");
-$modx->regClientCSS($modx->config['assets_url']."components/dropcalendar/css/web/main0000.css");
+/*$start = microtime(true);
+$array = array();
+
+for ($i = 0; $i < 1000000; $i++) {
+    $array[] = $assetsUrl;
+}
+$finish = microtime(true);
+$delta = $finish - $start;
+$output = $delta . ' сек.';
+*/
+
+$assetsUrl = $modx->config['assets_url'];
+$scriptProperties['useFullcalendar'] ? $modx->regClientCSS($assetsUrl."components/dropcalendar/css/web/fullcalendar.min.css") : '';
+$scriptProperties['useBootstrap'] ? $modx->regClientCSS($assetsUrl."components/dropcalendar/css/web/bootstrap.min.css") : '';
+$scriptProperties['useBootstrap'] ? $modx->regClientCSS($assetsUrl."components/dropcalendar/css/web/bootstrap-theme.css") : '';
+$modx->regClientCSS($assetsUrl."components/dropcalendar/css/web/main0000.css");
 
 
-$modx->regClientStartupScript($modx->config['assets_url']."components/dropcalendar/js/web/moment.min.js");         // <!-- Moment 2.18.1         -->
-$modx->regClientStartupScript($modx->config['assets_url']."components/dropcalendar/js/web/jquery.min.js");         // <!-- jQuery v3.2.1         -->
+$scriptProperties['useFullcalendar'] ? $modx->regClientStartupScript($assetsUrl."components/dropcalendar/js/web/moment.min.js") : '';         // <!-- Moment 2.18.1         -->
+$scriptProperties['useJquery'] ? $modx->regClientStartupScript($assetsUrl."components/dropcalendar/js/web/jquery.min.js") : '';         // <!-- jQuery v3.2.1         -->
 
-$modx->regClientScript($modx->config['assets_url']."components/dropcalendar/js/web/jquery-ui.min.js");      // <!-- jQuery UI 1.12.1      -->
-$modx->regClientScript($modx->config['assets_url']."components/dropcalendar/js/web/fullcalendar.min.js");   // <!-- Fullcalendar v3.4.0   -->
-$modx->regClientScript($modx->config['assets_url']."components/dropcalendar/js/web/bootstrap.min.js");      // <!-- Bootstrap v3.3.7      -->
-$modx->regClientScript($modx->config['assets_url']."components/dropcalendar/js/web/locale/ru.js");          //
+$scriptProperties['useJqueryUi'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/jquery-ui.min.js") : '';      // <!-- jQuery UI 1.12.1      -->
+$scriptProperties['useFullcalendar'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/fullcalendar.min.js") : '';   // <!-- Fullcalendar v3.4.0   -->
+$scriptProperties['useBootstrap'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/bootstrap.min.js") : '';      // <!-- Bootstrap v3.3.7      -->
+$modx->regClientScript($assetsUrl."components/dropcalendar/js/web/locale/ru.js");          // <!-- Русский язык      -->
 
 
-$output = $modx->getChunk($scriptProperties['eventsManagementTpl']);
-$output .= $modx->getChunk($scriptProperties['eventsWindowPopup']);
+$output .= $modx->getChunk($scriptProperties['tpl']);
+$output .= $modx->getChunk($scriptProperties['popupWindow']);
 return $output;
