@@ -5,11 +5,11 @@ $properties = array();
 $tmp = array(
     'tpl' => array(
         'type' => 'textfield',
-        'value' => 'eventTableTpl',
+        'value' => 'tableRow',
     ),
     'tplHead' => array(
         'type' => 'textfield',
-        'value' => 'eventTableHead',
+        'value' => 'tableOuter',
     ),
     'calendarNumber' => array(
         'type' => 'numberfield',

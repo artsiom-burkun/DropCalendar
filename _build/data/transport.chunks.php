@@ -6,19 +6,35 @@ $chunks = array();
 
 $tmp = array(
     'eventsManagementTpl' => array(
-        'file' => 'events',
+        'file' => 'eventsmanagement',
         'description' => '',
     ),
-    'eventsWindowPopup' => array(
-        'file' => 'window',
+    'eventsShowTpl' => array(
+        'file' => 'eventsshow',
         'description' => '',
     ),
-    'eventTableHead' => array(
-        'file' => 'head',
+    'windowOuterTemplate' => array(
+        'file' => 'windowouter',
+        'description' => '',
+    ),
+    'windowCreate' => array(
+        'file' => 'windowcreate',
+        'description' => '',
+    ),
+    'windowShow' => array(
+        'file' => 'windowshow',
+        'description' => '',
+    ),
+    'windowUpdate' => array(
+        'file' => 'windowupdate',
+        'description' => '',
+    ),
+    'tableOuter' => array(
+        'file' => 'tableouter',
         'description' => '',
     ),
     'eventTableTpl' => array(
-        'file' => 'table',
+        'file' => 'tablerow',
         'description' => '',
     ),
 );

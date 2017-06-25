@@ -5,7 +5,7 @@ $properties = array();
 $tmp = array(
     'tpl' => array(
         'type' => 'textfield',
-        'value' => 'eventsManagementTpl',
+        'value' => 'eventsShowTpl',
     ),
     'popupWindow' => array(
         'type' => 'textfield',

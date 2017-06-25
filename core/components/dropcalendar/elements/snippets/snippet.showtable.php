@@ -16,7 +16,6 @@ $scriptProperties['useBootstrap'] ? $modx->regClientCSS($assetsUrl."components/d
 $scriptProperties['useJquery'] ? $modx->regClientStartupScript($assetsUrl."components/dropcalendar/js/web/jquery.min.js") : '';     // <!-- jQuery v3.2.1         -->
 $scriptProperties['useBootstrap'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/bootstrap.min.js") : '';      // <!-- Bootstrap v3.3.7      -->
 
-
 // Build query
 $c = $modx->newQuery('DropCalendarItem');
 $items = $modx->getIterator('DropCalendarItem', $c);
@@ -30,19 +29,17 @@ foreach ($items as $item) {
     $list[] = $modx->getChunk($scriptProperties['tpl'], $item->toArray());
 }
 
-// Output
-$output = $modx->getChunk($scriptProperties['tplHead']);
 
-$output .= implode($outputSeparator, $list);
+// Output
+$output = implode($outputSeparator, $list);
 if (!empty($toPlaceholder)) {
     // If using a placeholder, output nothing and set output to specified placeholder
     $modx->setPlaceholder($toPlaceholder, $output);
-
     return '';
 }
 
-$output .= '</tbody></table>';
-
+$modx->setPlaceholder('tableRow', $output);
+$output = $modx->getChunk($scriptProperties['tplHead']);
 
 
 // By default just return output

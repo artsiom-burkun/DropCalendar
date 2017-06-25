@@ -46,39 +46,7 @@
                 $modal.modal({
                     backdrop: 'static'
                 });
-                form = $("<form>\
-                    <div class='row'>\
-    <div class='col-md-6'>\
-        <div class='form-group'><label class='control-label'>Имя нового события</label><input class='form-control' placeholder='Введите название события' name='title' type='text'></div>\
-    </div>\
-    <div class='col-md-6'>\
-        <div class='form-group'><label class='control-label'>Время начала:</label><input class='form-control' placeholder='19.00' name='start' id='start' type='text'></div>\
-    </div>\
-    <div class='col-md-6'>\
-        <div class='form-group'><label class='control-label'>Место проведения:</label><input class='form-control' placeholder='Зал' name='mesto' type='text'></div>\
-    </div>\
-    <div class='col-md-6'>\
-        <div class='form-group'><label class='control-label'>Конец:</label><input class='form-control' id='end' placeholder='21.00' name='end' type='text'></div>\
-    </div>\
-    <div class='col-md-6'>\
-        <div class='form-group'><label class='control-label'>Примечание:</label><input class='form-control' placeholder='Не забудьте шарфы, холодно' name='prim' type='text'></div>\
-    </div>\
-    <div class='col-md-6'>\
-        <div class='form-group'>\
-          <label class='control-label'>Категория</label>\
-          <select class='form-control' name='category'>\
-              <option value='label-green'>Тренировка</option>\
-              <option value='label-default'>Игра</option>\
-              <option value='label-purple'>Турнир</option>\
-              <option value='label-orange'>Вечеринка</option>\
-              <option value='label-yellow'>День рождения</option>\
-              <option value='label-teal'>Собрание родителей</option>\
-              <option value='label-beige'>Поездка</option>\
-           </select>\
-         </div>\
-    </div>\
-</div>\
-                    </form>");
+                form = $("[[+windowCreate]]");
 
                 $modal.find('.remove-event').hide().end()
                     .find('.save-event').show().end()
@@ -121,7 +89,6 @@
                             $modal.modal('hide');
 
                             var arr = JSON.parse(response);
-                            /*alert(arr.eventid);*/
 
                             $('#calendar').fullCalendar('renderEvent', {
                                 id: arr.eventid,
@@ -140,12 +107,14 @@
 
             eventClick: function(calEvent) {
                 var form = $("<form></form>");
-                form.append("<div class='row'><div class='col-md-6'><div class='form-group'><label class='control-label'>Имя события</label><input class='form-control' type='text' name='title' value='" + calEvent.title + "'></div></div><div class='col-md-6'><div class='form-group'><label class='control-label'>Время начала:</label><input class='form-control' value='" + calEvent.start.format("YYYY-MM-DD HH:mm") + "' type='text' name='start'></div></div><div class='col-md-6'><div class='form-group'><label class='control-label'>Место проведения:</label><input class='form-control' value='" + calEvent.mesto + "' type='text' name='mesto'></div></div><div class='col-md-6'><div class='form-group'><label class='control-label'>Конец:</label><input class='form-control' value='" + calEvent.end.format("YYYY-MM-DD HH:mm") + "' type='text' name='end'></div></div><div class='col-md-6'><div class='form-group'><label class='control-label'>Примечание:</label><input class='form-control' value='" + calEvent.prim + "' type='text' name='prim'></div></div><div class='col-md-6'><div class='form-group'><label class='control-label'>Категория</label><select class='form-control' name='category'><option value='label-green'>Тренировка</option><option value='label-default'>Игра</option><option value='label-purple'>Турнир</option><option value='label-orange'>Вечеринка</option><option value='label-yellow'>День рождения</option><option value='label-teal'>Собрание родителей</option><option value='label-beige'>Поездка</option></select></div></div></div><span class='input-group-btn'><button type='submit' class='btn btn-success'><i class='fa fa-check'></i> Сохранить изменения</button></span>");
-                /* form.append("<div class='input-group'><input class='form-control' type=text value='" + calEvent.title + "' /><span class='input-group-btn'><button type='submit' class='btn btn-success'><i class='fa fa-check'></i> Сохранить</button></span></div>"); */
+                form.append("[[+windowUpdate]]");
                 $modal.modal({
                     backdrop: 'static'
                 });
-                $modal.find('.remove-event').show().end().find('.save-event').hide().end().find('.modal-body').empty().prepend(form).end().find('.remove-event').unbind('click').click(function() {
+                $modal.find('.remove-event').show().end()
+                    .find('.save-event').hide().end()
+                    .find('.modal-body').empty().prepend(form).end()
+                    .find('.remove-event').unbind('click').click(function() {
 
                     action = 'deleteEvent';
                     $.ajax({

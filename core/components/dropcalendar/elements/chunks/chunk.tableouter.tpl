@@ -10,3 +10,6 @@
     </tr>
     </thead>
     <tbody>
+    [[+tableRow]]
+    </tbody>
+</table>
