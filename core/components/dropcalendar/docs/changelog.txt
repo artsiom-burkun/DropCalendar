@@ -1,5 +1,12 @@
 Changelog for DropCalendar.
 
+1.0.1-beta
+==============
+- Show calendar snippet
+- Show table snippet
+- Set properties
+- Adding some chunks
+
 1.0.0-beta
 ==============
 - CRUD for drag and drop calendar
