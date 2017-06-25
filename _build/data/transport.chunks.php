@@ -33,7 +33,7 @@ $tmp = array(
         'file' => 'tableouter',
         'description' => '',
     ),
-    'eventTableTpl' => array(
+    'tableRow' => array(
         'file' => 'tablerow',
         'description' => '',
     ),
