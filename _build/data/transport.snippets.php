@@ -13,6 +13,10 @@ $tmp = array(
         'file' => 'showtable',
         'description' => '',
     ),
+    'ShowEvents' => array(
+        'file' => 'showevents',
+        'description' => '',
+    ),
 );
 
 foreach ($tmp as $k => $v) {
