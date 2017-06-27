@@ -32,6 +32,12 @@
         </div>
         <div class='col-md-6'>
             <div class='form-group'>
+                <label class='control-label'>Сайт:</label>
+                <input class='form-control' placeholder='http://example.com/' name='site' type='text'>
+            </div>
+        </div>
+        <div class='col-md-6'>
+            <div class='form-group'>
                 <label class='control-label'>Категория</label>
                 <select class='form-control' name='category'>
                     <option value='label-green'>Тренировка</option>

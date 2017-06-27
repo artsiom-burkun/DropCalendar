@@ -14,6 +14,8 @@ $_lang['dropcalendar_item_end']         = 'Конец';
 $_lang['dropcalendar_item_mesto']       = 'Место';
 $_lang['dropcalendar_item_prim']        = 'Примечание';
 $_lang['dropcalendar_item_className']   = 'Тип';
+$_lang['dropcalendar_item_site']        = 'Сайт';
+$_lang['dropcalendar_item_calendar_id'] = '№ календаря';
 
 $_lang['dropcalendar_item_description'] = 'Описание';
 $_lang['dropcalendar_item_active']      = 'Активно';

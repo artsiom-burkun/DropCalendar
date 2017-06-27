@@ -42,9 +42,12 @@ class DropCalendar
         $this->modx->lexicon->load('dropcalendar:default');
     }
 
-    public function getEvents() {
+    public function getEvents($calendar_id) {
         $q = $this->modx->newQuery('DropCalendarItem');
-        $q->select('id,title,start,end,mesto,prim,className');
+        $q->select('id,title,start,end,mesto,prim,className,site');
+        $q->where(array(
+            'calendar_id' => $calendar_id
+        ));
         $q->prepare();
         $q->stmt->execute();
         $result = $q->stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -53,20 +56,22 @@ class DropCalendar
         return $result;
     }
 
-    public function addEvent($title, $start, $end, $mesto, $prim, $className) {
+    public function addEvent($title, $start, $end, $mesto, $prim, $className, $site, $calendar_id) {
         $fields = array(
             'title' => $title,
             'start' => $start,
             'end' => $end,
             'mesto' => $mesto,
             'prim' => $prim,
-            'className' => $className
+            'className' => $className,
+            'site' => $site,
+            'calendar_id' => $calendar_id
         );
         $quote = $this->modx->newObject('DropCalendarItem', $fields);
         $quote->save();
         $id = $this->modx->lastInsertId();
 
-        return json_encode(array('status'=>'success','eventid'=>$id));
+        return json_encode(array('status'=>'success','eventid'=>$id,'calendar_id'=>$calendar_id));
     }
 
     public function deleteEvent($id) {
@@ -85,6 +90,7 @@ class DropCalendar
         $u->set('mesto', $mesto);
         $u->set('prim', $prim);
         $u->set('className', $className);
+        $u->set('site', $site);
         if ( $u->save()) {
             return json_encode(array('status'=>'success','eventid'=>$id));
         } else {

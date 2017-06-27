@@ -77,13 +77,14 @@
                     mesto = form.find("input[name='mesto']").val();
                     prim = form.find("input[name='prim']").val();
                     className = form.find("select[name='category']").val();
+                    site = form.find("input[name='site']").val();
 
                     action = 'addEvent';
 
                     add.preventDefault();
                     $.ajax({
                         url: 'assets/components/dropcalendar/action.php',
-                        data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&className=' + className + '&action=' + action ,
+                        data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&className=' + className + '&site=' + site + '&action=' + action ,
                         type: "POST",
                         success: function(response) {
                             $modal.modal('hide');
@@ -97,7 +98,9 @@
                                 end: end,
                                 mesto: mesto,
                                 prim: prim,
-                                className: className
+                                className: className,
+                                site: site,
+                                calendar_id: arr.calendar_id
                             }, true );
                         }
                     });

@@ -11,8 +11,10 @@
         <field key="mesto"       dbtype="text" phptype="text" null="true" default=""/>
         <field key="prim"        dbtype="text" phptype="text" null="true" default=""/>
         <field key="className"   dbtype="text" phptype="text" null="true" default=""/>
+        <field key="site"        dbtype="text" phptype="text" null="true" default=""/>
 
-        <field key="active"      dbtype="tinyint" precision="1" phptype="boolean" attributes="unsigned" null="true" default="1" />
+        <field key="calendar_id" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="0" />
+
     </object>
 
 </model>

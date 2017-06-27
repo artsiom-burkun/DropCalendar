@@ -52,7 +52,13 @@ Ext.extend(DropCalendar.window.CreateItem, MODx.Window, {
                     name: 'mesto',
                     id: config.id + '-mesto',
                     anchor: '99%'
-                },{
+                },  {
+                    xtype: 'textfield',
+                    fieldLabel: _('dropcalendar_item_site'),
+                    name: 'site',
+                    id: config.id + '-site',
+                    anchor: '99%'
+                },  {
                     xtype: 'combo',
                     store: [
                         ["label-green",    _('dropcalendar_item_type_green')],
@@ -67,12 +73,6 @@ Ext.extend(DropCalendar.window.CreateItem, MODx.Window, {
                     name: 'className',
                     id: config.id + '-className',
                     anchor: '99%'
-                }, {
-                    xtype: 'xcheckbox',
-                    boxLabel: _('dropcalendar_item_active'),
-                    name: 'active',
-                    id: config.id + '-active',
-                    checked: true,
                 }]
             },{
                 columnWidth: .5
@@ -88,7 +88,13 @@ Ext.extend(DropCalendar.window.CreateItem, MODx.Window, {
                     id: config.id + '-end',
                     allowBlank: false,
                     anchor: '99%'
-                },{
+                }, {
+                    xtype: 'textfield',
+                    fieldLabel: _('dropcalendar_item_calendar_id'),
+                    name: 'calendar_id',
+                    id: config.id + '-calendar_id',
+                    anchor: '99%'
+                }, {
                     xtype: 'textarea',
                     fieldLabel: _('dropcalendar_item_prim'),
                     name: 'prim',
@@ -168,6 +174,12 @@ Ext.extend(DropCalendar.window.UpdateItem, MODx.Window, {
                         name: 'mesto',
                         id: config.id + '-mesto',
                         anchor: '99%'
+                    },  {
+                        xtype: 'textfield',
+                        fieldLabel: _('dropcalendar_item_site'),
+                        name: 'site',
+                        id: config.id + '-site',
+                        anchor: '99%'
                     },{
                         xtype: 'combo',
                         store: [
@@ -183,12 +195,6 @@ Ext.extend(DropCalendar.window.UpdateItem, MODx.Window, {
                         name: 'className',
                         id: config.id + '-className',
                         anchor: '99%'
-                    }, {
-                        xtype: 'xcheckbox',
-                        boxLabel: _('dropcalendar_item_active'),
-                        name: 'active',
-                        id: config.id + '-active',
-                        checked: true,
                     }]
                 },{
                     columnWidth: .5
@@ -204,7 +210,13 @@ Ext.extend(DropCalendar.window.UpdateItem, MODx.Window, {
                         id: config.id + '-end',
                         allowBlank: false,
                         anchor: '99%'
-                    },{
+                    }, {
+                        xtype: 'textfield',
+                        fieldLabel: _('dropcalendar_item_calendar_id'),
+                        name: 'calendar_id',
+                        id: config.id + '-calendar_id',
+                        anchor: '99%'
+                    }, {
                         xtype: 'textarea',
                         fieldLabel: _('dropcalendar_item_prim'),
                         name: 'prim',

@@ -12,7 +12,8 @@ $xpdo_meta_map['DropCalendarItem']= array (
     'mesto' => '',
     'prim' => '',
     'className' => '',
-    'active' => 1,
+    'site' => '',
+    'calendar_id' => 0,
   ),
   'fieldMeta' => 
   array (
@@ -55,14 +56,21 @@ $xpdo_meta_map['DropCalendarItem']= array (
       'null' => true,
       'default' => '',
     ),
-    'active' => 
+    'site' => 
     array (
-      'dbtype' => 'tinyint',
-      'precision' => '1',
-      'phptype' => 'boolean',
+      'dbtype' => 'text',
+      'phptype' => 'text',
+      'null' => true,
+      'default' => '',
+    ),
+    'calendar_id' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'integer',
       'attributes' => 'unsigned',
       'null' => true,
-      'default' => 1,
+      'default' => 0,
     ),
   ),
 );

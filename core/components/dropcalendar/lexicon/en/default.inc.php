@@ -14,6 +14,8 @@ $_lang['dropcalendar_item_end']         = 'End';
 $_lang['dropcalendar_item_mesto']       = 'Place';
 $_lang['dropcalendar_item_prim']        = 'Notes';
 $_lang['dropcalendar_item_className']   = 'Type';
+$_lang['dropcalendar_item_site']        = 'Site';
+$_lang['dropcalendar_item_calendar_id'] = '№ calendar';
 
 $_lang['dropcalendar_item_description'] = 'Description';
 $_lang['dropcalendar_item_active']      = 'Active';

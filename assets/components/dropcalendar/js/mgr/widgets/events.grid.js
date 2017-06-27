@@ -139,50 +139,8 @@ Ext.extend(DropCalendar.grid.Events, MODx.grid.Grid, {
         return true;
     },
 
-    disableItem: function () {
-        var ids = this._getSelectedIds();
-        if (!ids.length) {
-            return false;
-        }
-        MODx.Ajax.request({
-            url: this.config.url,
-            params: {
-                action: 'mgr/item/disable',
-                ids: Ext.util.JSON.encode(ids),
-            },
-            listeners: {
-                success: {
-                    fn: function () {
-                        this.refresh();
-                    }, scope: this
-                }
-            }
-        })
-    },
-
-    enableItem: function () {
-        var ids = this._getSelectedIds();
-        if (!ids.length) {
-            return false;
-        }
-        MODx.Ajax.request({
-            url: this.config.url,
-            params: {
-                action: 'mgr/item/enable',
-                ids: Ext.util.JSON.encode(ids),
-            },
-            listeners: {
-                success: {
-                    fn: function () {
-                        this.refresh();
-                    }, scope: this
-                }
-            }
-        })
-    },
-
     getFields: function () {
-        return ['id', 'title', 'start', 'end', 'mesto', 'prim', 'className', 'active', 'actions'];
+        return ['id', 'title', 'start', 'end', 'mesto', 'prim', 'className', 'site', 'calendar_id', 'actions'];
     },
 
     getColumns: function () {
@@ -222,11 +180,15 @@ Ext.extend(DropCalendar.grid.Events, MODx.grid.Grid, {
             sortable: false,
             width: 100,
         }, {
-            header: _('dropcalendar_item_active'),
-            dataIndex: 'active',
-            renderer: DropCalendar.utils.renderBoolean,
+            header: _('dropcalendar_item_site'),
+            dataIndex: 'site',
+            sortable: false,
+            width: 100,
+        }, {
+            header: _('dropcalendar_item_calendar_id'),
+            dataIndex: 'calendar_id',
             sortable: true,
-            width: 70,
+            width: 100,
         }, {
             header: _('dropcalendar_grid_actions'),
             dataIndex: 'actions',
