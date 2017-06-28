@@ -230,12 +230,14 @@
                 copiedEventObject.allDay = false; //< -- only change
                 copiedEventObject.mesto = document.getElementById("mesto-provedeniya").value; //< -- only change
                 copiedEventObject.prim = document.getElementById("primechanie").value; //< -- only change
+                copiedEventObject.site = document.getElementById("site").value; //< -- only change
 
                 title = copiedEventObject.title;
                 start = copiedEventObject.start;
                 end = copiedEventObject.end;
                 mesto = copiedEventObject.mesto;
                 prim = copiedEventObject.prim;
+                site = copiedEventObject.site;
                 className = [$categoryClass];
                 //	timestar = new Date(tempDate.setMinutes(tempDate.getMinutes() + 15)).toISOString();
 
@@ -244,7 +246,7 @@
 
                 $.ajax({
                     url: 'assets/components/dropcalendar/action.php',
-                    data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&className=' + className + '&action=' + action,
+                    data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&site=' + site + '&className=' + className + '&action=' + action,
                     type: "POST",
                     dataType: 'json',
                     success: function(response) {
@@ -377,6 +379,12 @@
                                 <label>Место:</label>
                                 <input class="form-control" id="mesto-provedeniya" name="mesto-provedeniya" value="Зал">
                             </div>
+
+                            <div class="form-group">
+                                <label>Сайт: </label>
+                                <input class="form-control" id="site" name="site" value="example.com">
+                            </div>
+
                             <div class="form-group">
                                 <label>Примечание: </label>
                                 <input class="form-control" id="primechanie" name="primechanie" value="Не опаздываем!">

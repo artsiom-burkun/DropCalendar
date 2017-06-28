@@ -82,7 +82,7 @@ class DropCalendar
         return json_encode(array('status'=>'success','eventid'=>$id));
     }
 
-    public function updateEventFull($id, $title, $start, $end, $mesto, $prim, $className) {
+    public function updateEventFull($id, $title, $start, $end, $mesto, $prim, $className, $site) {
         $u = $this->modx->getObject('DropCalendarItem', array('id'=>$id));
         $u->set('title', $title);
         $u->set('start', $start);
