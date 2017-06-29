@@ -37,7 +37,6 @@ if (!empty($toPlaceholder)) {
     $modx->setPlaceholder($toPlaceholder, $output);
     return '';
 }
-
 $modx->setPlaceholder('tableRow', $output);
 $output = $modx->getChunk($scriptProperties['tplHead']);
 

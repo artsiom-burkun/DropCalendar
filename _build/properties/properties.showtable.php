@@ -13,7 +13,7 @@ $tmp = array(
     ),
     'calendarNumber' => array(
         'type' => 'numberfield',
-        'value' => 1,
+        'value' => 0,
     ),
     'useJquery' => array(
         'type' => 'combo-boolean',

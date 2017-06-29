@@ -11,7 +11,15 @@
                 right: 'month,agendaWeek,agendaDay,listWeek'
             },
 
-            events: "assets/components/dropcalendar/action.php",
+            events: {
+                url: 'assets/components/dropcalendar/action.php',
+                data: function () {
+                    return {
+                        'calendarNumber': calendarNumber,
+                    };
+                }
+            },
+            dragRevertDuration: 200,
             timeFormat: 'HH:mm',
 
             editable: false,

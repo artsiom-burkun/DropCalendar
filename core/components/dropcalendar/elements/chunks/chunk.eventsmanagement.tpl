@@ -20,6 +20,8 @@
 
         });
 
+        var calendarNumber = [[+calendarNumber]];
+
         /* initialize the calendar
          -----------------------------------------------------------------*/
         var $modal = $('#event-management');
@@ -31,8 +33,17 @@
                 right: 'month,agendaWeek,agendaDay,listWeek'
             },
 
-            events: "assets/components/dropcalendar/action.php",
+            events: {
+                url: 'assets/components/dropcalendar/action.php',
+                data: function () {
+                    return {
+                        'calendarNumber': calendarNumber,
+                    };
+                }
+            },
+
             timeFormat: 'HH:mm',
+            dragRevertDuration: 200,
 
             editable: true,
             displayEventEnd: true,
@@ -84,7 +95,7 @@
                     add.preventDefault();
                     $.ajax({
                         url: 'assets/components/dropcalendar/action.php',
-                        data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&className=' + className + '&site=' + site + '&action=' + action ,
+                        data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&className=' + className + '&site=' + site + '&action=' + action + '&calendarNumber=' + calendarNumber ,
                         type: "POST",
                         success: function(response) {
                             $modal.modal('hide');
@@ -246,7 +257,7 @@
 
                 $.ajax({
                     url: 'assets/components/dropcalendar/action.php',
-                    data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&site=' + site + '&className=' + className + '&action=' + action,
+                    data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&site=' + site + '&className=' + className + '&action=' + action + '&calendarNumber=' + calendarNumber ,
                     type: "POST",
                     dataType: 'json',
                     success: function(response) {

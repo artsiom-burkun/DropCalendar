@@ -22,6 +22,9 @@ $updateForm = $modx->getChunk('windowUpdate');
 $updateForm = trim(preg_replace('/\s\s+/', ' ', $updateForm));
 $modx->setPlaceholder('windowUpdate', $updateForm);
 
+
+$modx->setPlaceholder('calendarNumber', $scriptProperties['calendarNumber']);
+
 $output .= $modx->getChunk($scriptProperties['tpl']);
 $output .= $modx->getChunk($scriptProperties['popupWindow']);
 return $output;

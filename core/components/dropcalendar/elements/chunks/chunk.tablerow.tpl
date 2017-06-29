@@ -4,5 +4,6 @@
     <td>[[+start]]</td>
     <td>[[+end]]</td>
     <td>[[+mesto]]</td>
+    <td>[[+site]]</td>
     <td>[[+prim]]</td>
 </tr>

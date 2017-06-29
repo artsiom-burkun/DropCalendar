@@ -18,6 +18,8 @@ $form = $modx->getChunk('windowShow');
 $form = trim(preg_replace('/\s\s+/', ' ', $form));
 $modx->setPlaceholder('windowShow', $form);
 
+$modx->setPlaceholder('calendarNumber', $scriptProperties['calendarNumber']);
+
 $output .= $modx->getChunk('eventsShowTpl');
 $output .= $modx->getChunk($scriptProperties['popupWindow']);
 return $output;
