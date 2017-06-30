@@ -18,7 +18,8 @@ else {
     $className=$_POST['className'];
 
     $site=$_POST['site'];
-    isset($_POST['calendar_id']) ? $calendar_id = $_POST['calendar_id'] : $calendar_id = '0';
+    isset($_GET['calendarNumber']) ? $calendar_id = $_GET['calendarNumber'] : $calendar_id = '0';
+    isset($_POST['calendarNumber']) ? $calendarNumber = $_POST['calendarNumber'] : $calendarNumber = '0';
 
 
 /** @var DropCalendar $DropCalendar */
@@ -29,7 +30,7 @@ $modx->lexicon->load('dropcalendar:default');
 
 switch ($action) {
     case 'addEvent':
-        $response = $DropCalendar->addEvent($title, $start, $end, $mesto, $prim, $className, $site, $calendar_id);
+        $response = $DropCalendar->addEvent($title, $start, $end, $mesto, $prim, $className, $site, $calendarNumber);
         break;
     case 'updateEventFull':
         $response = $DropCalendar->updateEventFull($id, $title, $start, $end, $mesto, $prim, $className, $site);

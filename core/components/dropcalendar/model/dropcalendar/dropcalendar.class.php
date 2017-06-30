@@ -56,7 +56,7 @@ class DropCalendar
         return $result;
     }
 
-    public function addEvent($title, $start, $end, $mesto, $prim, $className, $site, $calendar_id) {
+    public function addEvent($title, $start, $end, $mesto, $prim, $className, $site, $calendarNumber) {
         $fields = array(
             'title' => $title,
             'start' => $start,
@@ -65,13 +65,13 @@ class DropCalendar
             'prim' => $prim,
             'className' => $className,
             'site' => $site,
-            'calendar_id' => $calendar_id
+            'calendar_id' => $calendarNumber
         );
         $quote = $this->modx->newObject('DropCalendarItem', $fields);
         $quote->save();
         $id = $this->modx->lastInsertId();
 
-        return json_encode(array('status'=>'success','eventid'=>$id,'calendar_id'=>$calendar_id));
+        return json_encode(array('status'=>'success','eventid'=>$id,'calendarNumber'=>$calendarNumber));
     }
 
     public function deleteEvent($id) {
