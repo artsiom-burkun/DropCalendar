@@ -22,6 +22,8 @@ else {
     isset($_POST['calendarNumber']) ? $calendarNumber = $_POST['calendarNumber'] : $calendarNumber = '0';
 
 
+
+
 /** @var DropCalendar $DropCalendar */
 $DropCalendar = $modx->getService('dropcalendar', 'DropCalendar', $modx->getOption('dropcalendar_core_path', null,
         $modx->getOption('core_path') . 'components/dropcalendar/') . 'model/dropcalendar/'

@@ -4,6 +4,8 @@
          -----------------------------------------------------------------*/
         var $modal = $('#event-management');
 
+        var calendarNumber = [[+calendarNumber]];
+
         $('#calendar').fullCalendar({
             header: {
                 left: 'prev,next today',

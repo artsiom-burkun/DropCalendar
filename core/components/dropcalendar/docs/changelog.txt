@@ -1,9 +1,11 @@
 Changelog for DropCalendar.
 
-1.0.2-beta
+1.0.0-pl
 ==============
 - Add calendar number
 - Add site field
+- Icons change
+
 
 1.0.1-beta
 ==============

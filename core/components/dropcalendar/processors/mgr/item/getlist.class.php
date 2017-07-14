@@ -37,6 +37,7 @@ class DropCalendarItemGetListProcessor extends modObjectGetListProcessor
             $c->where(array(
                 'title:LIKE' => "%{$query}%",
                 'OR:prim:LIKE' => "%{$query}%",
+                'OR:calendar_id:LIKE' => "%{$query}%",
             ));
         }
 
@@ -57,7 +58,7 @@ class DropCalendarItemGetListProcessor extends modObjectGetListProcessor
         // Edit
         $array['actions'][] = array(
             'cls' => '',
-            'icon' => 'icon icon-edit',
+            'icon' => 'icon icon-pencil action-grey',
             'title' => $this->modx->lexicon('dropcalendar_item_update'),
             //'multiple' => $this->modx->lexicon('dropcalendar_items_update'),
             'action' => 'updateItem',
@@ -72,8 +73,8 @@ class DropCalendarItemGetListProcessor extends modObjectGetListProcessor
                 'title' => $this->modx->lexicon('dropcalendar_item_enable'),
                 'multiple' => $this->modx->lexicon('dropcalendar_items_enable'),
                 'action' => 'enableItem',
-                'button' => true,
-                'menu' => true,
+                'button' => false,
+                'menu' => false,
             );
         } else {
             $array['actions'][] = array(
@@ -82,15 +83,15 @@ class DropCalendarItemGetListProcessor extends modObjectGetListProcessor
                 'title' => $this->modx->lexicon('dropcalendar_item_disable'),
                 'multiple' => $this->modx->lexicon('dropcalendar_items_disable'),
                 'action' => 'disableItem',
-                'button' => true,
-                'menu' => true,
+                'button' => false,
+                'menu' => false,
             );
         }
 
         // Remove
         $array['actions'][] = array(
             'cls' => '',
-            'icon' => 'icon icon-trash-o action-red',
+            'icon' => 'icon icon-remove action-grey',
             'title' => $this->modx->lexicon('dropcalendar_item_remove'),
             'multiple' => $this->modx->lexicon('dropcalendar_items_remove'),
             'action' => 'removeItem',

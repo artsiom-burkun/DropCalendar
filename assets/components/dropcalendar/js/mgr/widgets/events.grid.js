@@ -25,7 +25,7 @@ DropCalendar.grid.Events = function (config) {
             showPreview: true,
             scrollOffset: 0,
             getRowClass: function (rec) {
-                return !rec.data.active
+                return rec.data.active
                     ? 'dropcalendar-grid-row-disabled'
                     : '';
             }
