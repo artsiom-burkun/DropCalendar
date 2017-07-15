@@ -69,21 +69,11 @@
                 $modal.find('form').on('submit', function(add) {
                     title = form.find("input[name='title']").val();
 
-                    eventStart = new Date(start);
-                    eventStart = new Date(eventStart.setHours(
-                        (eventStart.getHours() + (+document.getElementById("start").value.substr(0, 2))),
-                        (eventStart.getMinutes() + (+document.getElementById("start").value.substr(-2, 2)))
-                    )).toISOString();
+                    startTimeStandart = moment(start).add(document.getElementById("start").value.substr(-2, 2), 'minutes').add(document.getElementById("start").value.substr(0, 2), 'hours').format("YYYY-MM-DD HH:mm");
+                    endTimeStandart = moment(start).add(document.getElementById("end").value.substr(-2, 2), 'minutes').add(document.getElementById("end").value.substr(0, 2), 'hours').format("YYYY-MM-DD HH:mm");
 
-                    eventEnd = new Date(start);
-                    eventEnd = new Date(eventEnd.setHours(
-                        (eventEnd.getHours() + (+document.getElementById("end").value.substr(0, 2))),
-                        (eventEnd.getMinutes() + (+document.getElementById("end").value.substr(-2, 2)))
-                    )).toISOString();
-
-
-                    start = eventStart;
-                    end = eventEnd;
+                    start = startTimeStandart;
+                    end = endTimeStandart;
 
                     mesto = form.find("input[name='mesto']").val();
                     prim = form.find("input[name='prim']").val();
@@ -142,7 +132,6 @@
                     });
                 });
                 $modal.find('form').on('submit', function(e) {
-                    /*alert('Кнопка сохранить');*/
 
                     id = calEvent.id;
                     title = form.find("input[name='title']").val();
@@ -163,8 +152,6 @@
 
                             $modal.modal('hide');
                             console.log(id);
-
-                            // $('#calendar').fullCalendar('refetchEvents');
 
                             calEvent.id        = id;
                             calEvent.title     = title;
@@ -231,26 +218,23 @@
                 // assign it the date that was reported
                 copiedEventObject.title = $.trim($(this).text());
 
-                var tempDate = new Date(date); //clone date
-                copiedEventObject.start = new Date(tempDate.setHours(tempDate.getHours() + (+(document.getElementById("time-start").value)))).toISOString();
-                copiedEventObject.start = new Date(tempDate.setMinutes(tempDate.getMinutes() + (+(document.getElementById("time-start-m").value)))).toISOString();
+                startTimeStandart = moment(date).add(document.getElementById("time-start-m").value, 'minutes').add(document.getElementById("time-start").value, 'hours').format("YYYY-MM-DD HH:mm");
+                endTimeStandart = moment(startTimeStandart).add(document.getElementById("time-end-m").value, 'minutes').add(document.getElementById("time-end").value, 'hours').format("YYYY-MM-DD HH:mm");
 
-                copiedEventObject.end = new Date(tempDate.setHours(tempDate.getHours() + (+(document.getElementById("time-end").value)))).toISOString();
-                copiedEventObject.end = new Date(tempDate.setMinutes(tempDate.getMinutes() + (+(document.getElementById("time-end-m").value)))).toISOString();
-
-                copiedEventObject.allDay = false; //< -- only change
-                copiedEventObject.mesto = document.getElementById("mesto-provedeniya").value; //< -- only change
-                copiedEventObject.prim = document.getElementById("primechanie").value; //< -- only change
-                copiedEventObject.site = document.getElementById("site").value; //< -- only change
+                copiedEventObject.start = startTimeStandart;
+                copiedEventObject.end = endTimeStandart;
+                copiedEventObject.allDay = false;
+                copiedEventObject.mesto = document.getElementById("mesto-provedeniya").value;
+                copiedEventObject.prim = document.getElementById("primechanie").value;
+                copiedEventObject.site = document.getElementById("site").value;
 
                 title = copiedEventObject.title;
-                start = copiedEventObject.start;
-                end = copiedEventObject.end;
+                start = startTimeStandart;
+                end = endTimeStandart;
                 mesto = copiedEventObject.mesto;
                 prim = copiedEventObject.prim;
                 site = copiedEventObject.site;
                 className = [$categoryClass];
-                //	timestar = new Date(tempDate.setMinutes(tempDate.getMinutes() + 15)).toISOString();
 
                 action = 'addEvent';
 
@@ -275,9 +259,6 @@
 
                 if ($categoryClass)
                     copiedEventObject['className'] = [$categoryClass];
-                // render the event on the calendar
-                // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-                //$('#calendar').fullCalendar('renderEvent', copiedEventObject, false);
 
             },
 
