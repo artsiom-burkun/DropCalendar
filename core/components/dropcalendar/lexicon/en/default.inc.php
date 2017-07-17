@@ -48,3 +48,12 @@ $_lang['dropcalendar_item_err_save'] = 'An error occurred while trying to save t
 
 $_lang['dropcalendar_grid_search'] = 'Search';
 $_lang['dropcalendar_grid_actions'] = 'Actions';
+
+$_lang['correct_title']  = 'Enter title in the right way';
+$_lang['correct_start']  = 'Enter start time correctly';
+$_lang['correct_end']    = 'Enter ent time correctly';
+$_lang['correct_time']   = 'Time start should be earlier end time';
+$_lang['correct_prim']   = 'Enter comment correctly';
+$_lang['correct_mesto']  = 'Enter place correctly';
+$_lang['dropcalendar_item_noid'] = 'Item has no id';
+$_lang['dropcalendar_item_notitle'] = 'Enter event title';

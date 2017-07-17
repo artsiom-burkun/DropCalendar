@@ -49,3 +49,14 @@ $_lang['dropcalendar_item_err_save'] = 'Ошибка при сохранении
 
 $_lang['dropcalendar_grid_search'] = 'Поиск';
 $_lang['dropcalendar_grid_actions'] = 'Действия';
+
+
+$_lang['correct_title']  = 'Введите название события правильно: используйте буквы и цифры';
+$_lang['correct_start']  = 'Введите время начала правильно';
+$_lang['correct_end']    = 'Введите время завершения правильно';
+$_lang['correct_time']   = 'Время начала должно быть раньше времени завершения';
+$_lang['correct_prim']   = 'Введите ппримечание правильно: используйте буквы и цифры';
+$_lang['correct_mesto']  = 'Введите место проведения правильно: используйте буквы и цифры';
+$_lang['dropcalendar_item_noid'] = 'У события нет номера id';
+$_lang['dropcalendar_item_notitle'] = 'Введите заголовок события';
+

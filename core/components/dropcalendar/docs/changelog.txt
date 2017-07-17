@@ -5,6 +5,7 @@ Changelog for DropCalendar.
 - Add calendar number
 - Add site field
 - Icons change
+- Validation add
 
 
 1.0.1-beta
@@ -17,6 +18,6 @@ Changelog for DropCalendar.
 1.0.0-beta
 ==============
 - CRUD for drag and drop calendar
-- Modal windows for event adding adn updating
+- Modal windows for event adding and updating
 - Component table on manager page
 - Basic design on twitter bootstrap

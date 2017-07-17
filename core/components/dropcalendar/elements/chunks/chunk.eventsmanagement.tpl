@@ -88,21 +88,30 @@
                         data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&className=' + className + '&site=' + site + '&action=' + action + '&calendarNumber=' + calendarNumber ,
                         type: "POST",
                         success: function(response) {
-                            $modal.modal('hide');
 
+                            $modal.modal('hide');
                             var arr = JSON.parse(response);
 
-                            $('#calendar').fullCalendar('renderEvent', {
-                                id: arr.eventid,
-                                title: title,
-                                start: start,
-                                end: end,
-                                mesto: mesto,
-                                prim: prim,
-                                className: className,
-                                site: site,
-                                calendar_id: arr.calendar_id
-                            }, true );
+                            if (arr.status === 'failure') {
+                                alert(arr.error);
+                            }
+                            else {
+                                $('#calendar').fullCalendar('renderEvent', {
+                                    id: arr.eventid,
+                                    title: title,
+                                    start: start,
+                                    end: end,
+                                    mesto: mesto,
+                                    prim: prim,
+                                    className: className,
+                                    site: site,
+                                    calendar_id: arr.calendar_id
+                                }, true );
+
+
+                            }
+
+
                         }
                     });
                 });
@@ -125,9 +134,17 @@
                         url: "assets/components/dropcalendar/action.php",
                         data: '&id=' + calEvent.id + '&action=' + action,
                         type: "POST",
-                        success: function() {
+                        success: function(response) {
                             $modal.modal('hide');
-                            $('#calendar').fullCalendar('removeEvents', [calEvent._id]);
+                            var arr = JSON.parse(response);
+
+                            if (arr.status === 'failure') {
+                                alert(arr.error);
+                            }
+                            else {
+                                $('#calendar').fullCalendar('removeEvents', [calEvent._id]);
+                            }
+
                         }
                     });
                 });
@@ -148,19 +165,29 @@
                         url: 'assets/components/dropcalendar/action.php',
                         data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&id=' + id + '&className=' + className + '&action=' + action,
                         type: "POST",
-                        success: function() {
+                        success: function(response) {
 
                             $modal.modal('hide');
-                            console.log(id);
+                            var arr = JSON.parse(response);
 
-                            calEvent.id        = id;
-                            calEvent.title     = title;
-                            calEvent.start     = start;
-                            calEvent.end       = end;
-                            calEvent.mesto     = mesto;
-                            calEvent.prim      = prim;
-                            calEvent.className = className;
-                            $('#calendar').fullCalendar('updateEvent', calEvent);
+                            if (arr.status === 'failure') {
+                                alert(arr.error);
+                            }
+                            else {
+
+
+                                console.log(id);
+
+                                calEvent.id        = id;
+                                calEvent.title     = title;
+                                calEvent.start     = start;
+                                calEvent.end       = end;
+                                calEvent.mesto     = mesto;
+                                calEvent.prim      = prim;
+                                calEvent.className = className;
+                                $('#calendar').fullCalendar('updateEvent', calEvent);
+
+                            }
 
                         }
                     });
@@ -176,10 +203,17 @@
                     url: 'assets/components/dropcalendar/action.php',
                     data: 'title=' + event.title + '&start=' + start + '&end=' + end + '&id=' + event.id + '&action=' + action,
                     type: "POST",
-                    dataType: 'json',
+                    //dataType: 'json',
                     success: function(response) {
-                        event.id = response.eventid;
-                        console.log(event.id);
+
+                        var arr = JSON.parse(response);
+                        if (arr.status === 'failure') {
+                            alert(arr.error);
+                        }
+                        else {
+                            event.id = arr.eventid;
+                            console.log(event.id);
+                        }
                     },
                     error: function(e) {
                         console.log(e.responseText);
@@ -197,8 +231,14 @@
                     data: 'title=' + event.title + '&start=' + start + '&end=' + end + '&id=' + event.id + '&action=' + action,
                     type: "POST",
                     success: function(response) {
-                        copiedEventObject.id = response.eventid;
-                        console.log(response.eventid);
+                        var arr = JSON.parse(response);
+                        if (arr.status === 'failure') {
+                            alert(arr.error);
+                        }
+                        else {
+                            copiedEventObject.id = arr.eventid;
+                            console.log(arr.eventid);
+                        }
                     },
                     error: function(e) {
                         console.log(e.responseText);
@@ -243,11 +283,17 @@
                     url: 'assets/components/dropcalendar/action.php',
                     data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&site=' + site + '&className=' + className + '&action=' + action + '&calendarNumber=' + calendarNumber ,
                     type: "POST",
-                    dataType: 'json',
                     success: function(response) {
-                        copiedEventObject.id = response.eventid;
-                        $('#calendar').fullCalendar('renderEvent', copiedEventObject, false);
-                        console.log(response.eventid);
+                        var arr = JSON.parse(response);
+
+                        if (arr.status === 'failure') {
+                            alert(arr.error);
+                        }
+                        else {
+                            copiedEventObject.id = arr.eventid;
+                            $('#calendar').fullCalendar('renderEvent', copiedEventObject, false);
+                            console.log(arr.eventid);
+                        }
                     },
                     error: function(e) {
                         console.log(e.responseText);
