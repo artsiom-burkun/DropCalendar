@@ -30,7 +30,7 @@ Javascript libraries:
  	&useBootstrap=`1`
  ]]
  by default.
- 
+
  Change &calendarNumber value to work with different calendars.
  Change  &locale value to set your locale.
 
