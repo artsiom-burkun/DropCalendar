@@ -67,6 +67,10 @@ else {
                 exit(json_encode(array('status'=>'failure','error'=>$modx->lexicon('correct_prim'))));
             }
 
+            if (!preg_match("/^[a-zA-Z0-9:\/.]+$/u",$site) && !empty($site)) {
+                exit(json_encode(array('status'=>'failure','error'=>$modx->lexicon('correct_site'))));
+            }
+
         }
 
     }

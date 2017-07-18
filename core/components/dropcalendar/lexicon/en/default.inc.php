@@ -55,5 +55,6 @@ $_lang['correct_end']    = 'Enter ent time correctly';
 $_lang['correct_time']   = 'Time start should be earlier end time';
 $_lang['correct_prim']   = 'Enter comment correctly';
 $_lang['correct_mesto']  = 'Enter place correctly';
+$_lang['correct_site']   = 'Enter site correctly';
 $_lang['dropcalendar_item_noid'] = 'Item has no id';
 $_lang['dropcalendar_item_notitle'] = 'Enter event title';

@@ -4,7 +4,7 @@
  * The home manager controller for DropCalendar.
  *
  */
-class DropCalendarHomeManagerController extends DropCalendarManagerController
+class DropCalendarHomeManagerController extends modExtraManagerController
 {
     /** @var DropCalendar $DropCalendar */
     public $DropCalendar;

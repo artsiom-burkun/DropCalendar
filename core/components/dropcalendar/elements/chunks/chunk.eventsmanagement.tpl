@@ -156,6 +156,7 @@
                     end = form.find("input[name='end']").val();
                     mesto = form.find("input[name='mesto']").val();
                     prim = form.find("input[name='prim']").val();
+                    site = form.find("input[name='site']").val();
                     className = form.find("select[name='category']").val();
 
                     e.preventDefault();
@@ -163,7 +164,7 @@
 
                     $.ajax({
                         url: 'assets/components/dropcalendar/action.php',
-                        data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&id=' + id + '&className=' + className + '&action=' + action,
+                        data: 'title=' + title + '&start=' + start + '&end=' + end + '&mesto=' + mesto + '&prim=' + prim + '&id=' + id + '&className=' + className + '&site=' + site + '&action=' + action,
                         type: "POST",
                         success: function(response) {
 
@@ -420,7 +421,7 @@
 
                             <div class="form-group">
                                 <label>Сайт: </label>
-                                <input class="form-control" id="site" name="site" value="example.com">
+                                <input class="form-control" id="site" name="site" value="http://example.com">
                             </div>
 
                             <div class="form-group">
