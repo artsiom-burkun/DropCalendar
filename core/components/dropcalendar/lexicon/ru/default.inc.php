@@ -20,13 +20,13 @@ $_lang['dropcalendar_item_calendar_id'] = '№ календаря';
 $_lang['dropcalendar_item_description'] = 'Описание';
 $_lang['dropcalendar_item_active']      = 'Активно';
 
-$_lang['dropcalendar_item_type_green']  = 'Тренировка';
-$_lang['dropcalendar_item_type_blue']   = 'Игра';
-$_lang['dropcalendar_item_type_purple'] = 'Турнир';
-$_lang['dropcalendar_item_type_orange'] = 'Вечеринка';
-$_lang['dropcalendar_item_type_yellow'] = 'День рождения';
-$_lang['dropcalendar_item_type_teal']   = 'Собрание родителей';
-$_lang['dropcalendar_item_type_beige']  = 'Поездка';
+$_lang['dropcalendar_item_type_green']  = 'Зеленый цвет';
+$_lang['dropcalendar_item_type_blue']   = 'Синий цвет';
+$_lang['dropcalendar_item_type_purple'] = 'Фиолетовый цвет';
+$_lang['dropcalendar_item_type_orange'] = 'Оранжевый цвет';
+$_lang['dropcalendar_item_type_yellow'] = 'Желтый цвет';
+$_lang['dropcalendar_item_type_teal']   = 'Бирюзовый цвет';
+$_lang['dropcalendar_item_type_beige']  = 'Бежевый цвет';
 
 $_lang['dropcalendar_item_create'] = 'Создать Событие';
 $_lang['dropcalendar_item_update'] = 'Изменить Событие';

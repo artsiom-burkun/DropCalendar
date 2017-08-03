@@ -20,13 +20,13 @@ $_lang['dropcalendar_item_calendar_id'] = '№ calendar';
 $_lang['dropcalendar_item_description'] = 'Description';
 $_lang['dropcalendar_item_active']      = 'Active';
 
-$_lang['dropcalendar_item_type_green']  = 'Training';
-$_lang['dropcalendar_item_type_blue']   = 'Game';
-$_lang['dropcalendar_item_type_purple'] = 'Championship';
-$_lang['dropcalendar_item_type_orange'] = 'Party';
-$_lang['dropcalendar_item_type_yellow'] = 'Birthday';
-$_lang['dropcalendar_item_type_teal']   = 'Parent meeting';
-$_lang['dropcalendar_item_type_beige']  = 'Trip';
+$_lang['dropcalendar_item_type_green']  = 'Green color';
+$_lang['dropcalendar_item_type_blue']   = 'Blue color';
+$_lang['dropcalendar_item_type_purple'] = 'Purple color';
+$_lang['dropcalendar_item_type_orange'] = 'Orange color';
+$_lang['dropcalendar_item_type_yellow'] = 'Yellow color';
+$_lang['dropcalendar_item_type_teal']   = 'Teal color';
+$_lang['dropcalendar_item_type_beige']  = 'Beige color';
 
 $_lang['dropcalendar_item_create'] = 'Create Event';
 $_lang['dropcalendar_item_update'] = 'Update Event';

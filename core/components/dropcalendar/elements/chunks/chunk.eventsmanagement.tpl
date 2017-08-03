@@ -375,27 +375,28 @@
                     </div>
                     <hr>
                     <h4>Добавить событие:</h4>
+                    <p>← Перетащите событие на календарь</p>
                     <div id="event-categories">
                         <div class="event-category label-green" data-class="label-green">
-                            <i class="fa fa-move"></i> Тренировка
+                            <i class="fa fa-move"></i> Заголовок 1
                         </div>
                         <div class="event-category label-default" data-class="label-default">
-                            <i class="fa fa-move"></i> Игра
+                            <i class="fa fa-move"></i> Заголовок 2
                         </div>
                         <div class="event-category label-purple" data-class="label-purple">
-                            <i class="fa fa-move"></i> Турнир
+                            <i class="fa fa-move"></i> Заголовок 3
                         </div>
                         <div class="event-category label-orange" data-class="label-orange">
-                            <i class="fa fa-move"></i> Вечеринка
+                            <i class="fa fa-move"></i> Заголовок 4
                         </div>
                         <div class="event-category label-yellow" data-class="label-yellow">
-                            <i class="fa fa-move"></i> День рождения
+                            <i class="fa fa-move"></i> Заголовок 5
                         </div>
                         <div class="event-category label-teal" data-class="label-teal">
-                            <i class="fa fa-move"></i> Собрание родителей
+                            <i class="fa fa-move"></i> Заголовок 6
                         </div>
                         <div class="event-category label-beige" data-class="label-beige">
-                            <i class="fa fa-move"></i> Поездка
+                            <i class="fa fa-move"></i> Заголовок 7
                         </div>
                         <hr>
                         <h4>Параметры события:</h4>

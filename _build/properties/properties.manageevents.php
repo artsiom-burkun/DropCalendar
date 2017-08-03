@@ -5,11 +5,11 @@ $properties = array();
 $tmp = array(
     'tpl' => array(
         'type' => 'textfield',
-        'value' => 'eventsManagementTpl',
+        'value' => 'DcEvManage',
     ),
     'popupWindow' => array(
         'type' => 'textfield',
-        'value' => 'windowOuterTemplate',
+        'value' => 'DcwOuter',
     ),
     'locale' => array(
         'type' => 'textfield',

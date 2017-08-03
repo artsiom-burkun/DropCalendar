@@ -5,35 +5,35 @@
 $chunks = array();
 
 $tmp = array(
-    'eventsManagementTpl' => array(
+    'DcEvManage' => array(
         'file' => 'eventsmanagement',
         'description' => '',
     ),
-    'eventsShowTpl' => array(
+    'DcEvShow' => array(
         'file' => 'eventsshow',
         'description' => '',
     ),
-    'windowOuterTemplate' => array(
+    'DcwOuter' => array(
         'file' => 'windowouter',
         'description' => '',
     ),
-    'windowCreate' => array(
+    'DcwCreate' => array(
         'file' => 'windowcreate',
         'description' => '',
     ),
-    'windowShow' => array(
+    'DcwShow' => array(
         'file' => 'windowshow',
         'description' => '',
     ),
-    'windowUpdate' => array(
+    'DcwUpdate' => array(
         'file' => 'windowupdate',
         'description' => '',
     ),
-    'tableOuter' => array(
+    'DcTableOuter' => array(
         'file' => 'tableouter',
         'description' => '',
     ),
-    'tableRow' => array(
+    'DcTableRow' => array(
         'file' => 'tablerow',
         'description' => '',
     ),

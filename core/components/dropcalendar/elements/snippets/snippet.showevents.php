@@ -14,12 +14,12 @@ $scriptProperties['useFullcalendar'] ? $modx->regClientScript($assetsUrl."compon
 $scriptProperties['useBootstrap'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/bootstrap.min.js") : '';      // <!-- Bootstrap v3.3.7      -->
 $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/locale/".$scriptProperties['locale'].".js");          // <!-- Русский язык      -->
 
-$form = $modx->getChunk('windowShow');
+$form = $modx->getChunk('DcwShow');
 $form = trim(preg_replace('/\s\s+/', ' ', $form));
 $modx->setPlaceholder('windowShow', $form);
 
 $modx->setPlaceholder('calendarNumber', $scriptProperties['calendarNumber']);
 
-$output .= $modx->getChunk('eventsShowTpl');
+$output .= $modx->getChunk('DcEvShow');
 $output .= $modx->getChunk($scriptProperties['popupWindow']);
 return $output;

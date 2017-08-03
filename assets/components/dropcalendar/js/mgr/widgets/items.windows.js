@@ -61,13 +61,13 @@ Ext.extend(DropCalendar.window.CreateItem, MODx.Window, {
                 },  {
                     xtype: 'combo',
                     store: [
-                        ["label-green",    _('dropcalendar_item_type_green')],
-                        ['label-default',  _('dropcalendar_item_type_blue')],
-                        ['label-purple',   _('dropcalendar_item_type_purple')],
-                        ['label-orange',   _('dropcalendar_item_type_orange')],
-                        ['label-yellow',   _('dropcalendar_item_type_yellow')],
-                        ['label-teal',     _('dropcalendar_item_type_teal')],
-                        ['label-beige',    _('dropcalendar_item_type_beige')]
+                        [('dropcalendar_item_type_green'),      'label-green'    ],
+                        [('dropcalendar_item_type_blue'),       'label-default'  ],
+                        [('dropcalendar_item_type_purple'),     'label-purple'   ],
+                        [('dropcalendar_item_type_orange'),     'label-orange'   ],
+                        [('dropcalendar_item_type_yellow'),     'label-yellow'   ],
+                        [('dropcalendar_item_type_teal'),       'label-teal'     ],
+                        [('dropcalendar_item_type_beige'),      'label-beige'    ]
                     ],
                     fieldLabel: _('dropcalendar_item_className'),
                     name: 'className',
@@ -183,13 +183,13 @@ Ext.extend(DropCalendar.window.UpdateItem, MODx.Window, {
                     },{
                         xtype: 'combo',
                         store: [
-                            ["label-green",    _('dropcalendar_item_type_green')],
-                            ['label-default',  _('dropcalendar_item_type_blue')],
-                            ['label-purple',   _('dropcalendar_item_type_purple')],
-                            ['label-orange',   _('dropcalendar_item_type_orange')],
-                            ['label-yellow',   _('dropcalendar_item_type_yellow')],
-                            ['label-teal',     _('dropcalendar_item_type_teal')],
-                            ['label-beige',    _('dropcalendar_item_type_beige')]
+                            [('dropcalendar_item_type_green'),      'label-green'    ],
+                            [('dropcalendar_item_type_blue'),       'label-default'  ],
+                            [('dropcalendar_item_type_purple'),     'label-purple'   ],
+                            [('dropcalendar_item_type_orange'),     'label-orange'   ],
+                            [('dropcalendar_item_type_yellow'),     'label-yellow'   ],
+                            [('dropcalendar_item_type_teal'),       'label-teal'     ],
+                            [('dropcalendar_item_type_beige'),      'label-beige'    ]
                         ],
                         fieldLabel: _('dropcalendar_item_className'),
                         name: 'className',

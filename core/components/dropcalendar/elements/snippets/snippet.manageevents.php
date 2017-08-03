@@ -14,11 +14,11 @@ $scriptProperties['useFullcalendar'] ? $modx->regClientScript($assetsUrl."compon
 $scriptProperties['useBootstrap'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/bootstrap.min.js") : '';      // <!-- Bootstrap v3.3.7      -->
 $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/locale/".$scriptProperties['locale'].".js");          // <!-- Русский язык      -->
 
-$createForm = $modx->getChunk('windowCreate');
+$createForm = $modx->getChunk('DcwCreate');
 $createForm = trim(preg_replace('/\s\s+/', ' ', $createForm));
 $modx->setPlaceholder('windowCreate', $createForm);
 
-$updateForm = $modx->getChunk('windowUpdate');
+$updateForm = $modx->getChunk('DcwUpdate');
 $updateForm = trim(preg_replace('/\s\s+/', ' ', $updateForm));
 $modx->setPlaceholder('windowUpdate', $updateForm);
 

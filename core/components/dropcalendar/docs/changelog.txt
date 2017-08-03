@@ -1,4 +1,9 @@
 Changelog for DropCalendar.
+1.0.1-pl
+==============
+- Snippets and chunks rename
+- Category fix
+- Table category fix
 
 1.0.0-pl
 ==============

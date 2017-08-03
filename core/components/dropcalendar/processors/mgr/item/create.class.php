@@ -16,8 +16,6 @@ class DropCalendarItemCreateProcessor extends modObjectCreateProcessor
         $title = trim($this->getProperty('title'));
         if (empty($title)) {
             $this->modx->error->addField('title', $this->modx->lexicon('dropcalendar_item_err_title'));
-        } elseif ($this->modx->getCount($this->classKey, array('title' => $title))) {
-            $this->modx->error->addField('title', $this->modx->lexicon('dropcalendar_item_err_ae'));
         }
 
         return parent::beforeSet();

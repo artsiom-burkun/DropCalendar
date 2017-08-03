@@ -5,15 +5,15 @@
 $snippets = array();
 
 $tmp = array(
-    'ManageEvents' => array(
+    'DcManage' => array(
         'file' => 'manageevents',
         'description' => '',
     ),
-    'ShowTable' => array(
+    'DcTable' => array(
         'file' => 'showtable',
         'description' => '',
     ),
-    'ShowEvents' => array(
+    'DcShow' => array(
         'file' => 'showevents',
         'description' => '',
     ),
