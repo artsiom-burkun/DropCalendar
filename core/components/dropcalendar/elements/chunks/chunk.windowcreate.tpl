@@ -38,15 +38,15 @@
             </div>
             <div class='col-md-6'>
                 <div class='form-group'>
-                    <label class='control-label'>Категория</label>
+                    <label class='control-label'>Цвет события:</label>
                     <select class='form-control' name='category'>
-                        <option value='label-green'>Тренировка</option>
-                        <option value='label-default'>Игра</option>
-                        <option value='label-purple'>Турнир</option>
-                        <option value='label-orange'>Вечеринка</option>
-                        <option value='label-yellow'>День рождения</option>
-                        <option value='label-teal'>Собрание родителей</option>
-                        <option value='label-beige'>Поездка</option>
+                        <option value='label-green'>Зеленый</option>
+                        <option value='label-default'>Синий</option>
+                        <option value='label-purple'>Фиолетовый</option>
+                        <option value='label-orange'>Оранжевый</option>
+                        <option value='label-yellow'>Желтый</option>
+                        <option value='label-teal'>Пурпурный</option>
+                        <option value='label-beige'>Бежевый</option>
                     </select>
                 </div>
             </div>

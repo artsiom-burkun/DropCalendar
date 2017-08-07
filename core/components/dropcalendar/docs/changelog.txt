@@ -1,9 +1,12 @@
 Changelog for DropCalendar.
 1.0.1-pl
 ==============
-- Snippets and chunks rename
-- Category fix
+- Snippets, chunks, categories rename
 - Table category fix
+- Add an opportunity to create event with the same title
+- Touch Punch for mobile devices
+- Modal window fix for mobile devices
+- Minor style changes
 
 1.0.0-pl
 ==============

@@ -47,30 +47,56 @@ body {
 }
 
 body.modal-open,
-.modal-open .navbar-fixed-top, 
+.modal-open .navbar-fixed-top,
 .modal-open .navbar-fixed-bottom {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .modal {
-  left: 50%;
-  top: 20%;
-  bottom: auto;
-  right: auto;
-  padding: 0;
-  width: 500px;
-  margin-left: -250px;
-  background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
+    left: 50%;
+    top: 20%;
+    bottom: auto;
+    right: auto;
+    padding: 0;
+    width: 500px;
+    margin-left: -250px;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
 }
 
+@media (max-width: 980px) {
+    .modal {
+        width: 500px;
+        left: 50%;
+        top: 5%;
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal {
+        width: 380px;
+        left: 60%;
+        top: 5%;
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 410px) {
+    .modal {
+        width: 270px;
+        left: 90%;
+        top: 5%;
+        max-height: 400px;
+    }
+}
 .modal.container {
-  max-width: none;
+    max-width: none;
 }
 
 
@@ -178,97 +204,104 @@ body.modal-open,
 /*	Calendar
 /* ---------------------------------------------------------------------- */
 #calendar {
-	position: relative;
+    position: relative;
 }
 .fc-event {
-	padding: 2px;
+    padding: 2px;
 }
 .fc-day-number {
-	margin: 2px 2px 0 0;
+    margin: 2px 2px 0 0;
 }
 .fc-header-title h2 {
-	color: #666666;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 200;
-	letter-spacing: -1px;
+    color: #666666;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    letter-spacing: -1px;
 }
 .fc-today .fc-day-number {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .fc-state-highlight {
-	background: #F5F5F5 !important;
+    background: #F5F5F5 !important;
 }
 .fc-button {
-	color: #666666 !important;
+    color: #666666 !important;
 }
 .fc-state-default {
-	background-color: #ffffff !important;
-	background-image: none !important;
-	border-color: #666666 !important;
-	box-shadow: none !important;
-	color: #666666;
-	text-shadow: none !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border-color: #666666 !important;
+    box-shadow: none !important;
+    color: #666666;
+    text-shadow: none !important;
 }
 .fc-state-down, .fc-state-active {
-	box-shadow: none !important;
-	outline: 0 none;
-	background-color: #569099 !important;
-	border-color: #4D8189 !important;
-	color: #FFFFFF !important;
+    box-shadow: none !important;
+    outline: 0 none;
+    background-color: #569099 !important;
+    border-color: #4D8189 !important;
+    color: #FFFFFF !important;
 }
 .fc-header-left {
-	position: absolute !important;
-	top: 0;
-	left: 0;
-	width: 50% !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 50% !important;
 }
 .fc-header-right {
-	position: absolute !important;
-	top: 0;
-	right: 0;
-	width: 50% !important;
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    width: 50% !important;
 }
 .fc-header-center {
-	display: block !important;
-	padding-top: 40px !important;
+    display: block !important;
+    padding-top: 40px !important;
 }
 .event-category {
-	color: #ffffff;
-	padding: 5px;
-	border-radius: 3px;
-	margin: 5px 0;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 5px 0;
 }
 .label-default, .badge-default {
-	background-color: #3A87AD !important;
-	border-color: #3A87AD !important;
+    background-color: #3A87AD !important;
+    border-color: #3A87AD !important;
+    cursor: pointer;
 }
 .label-orange, .badge-orange {
-	background-color: #E6674A !important;
-	border-color: #E6674A !important;
+    background-color: #E6674A !important;
+    border-color: #E6674A !important;
+    cursor: pointer;
 }
 .label-purple, .badge-purple {
-	background-color: #57517B !important;
-	border-color: #57517B !important;
+    background-color: #57517B !important;
+    border-color: #57517B !important;
+    cursor: pointer;
 }
 .label-yellow, .badge-yellow {
-	background-color: #FFB848 !important;
-	border-color: #FFB848 !important;
+    background-color: #FFB848 !important;
+    border-color: #FFB848 !important;
+    cursor: pointer;
 }
 .label-teal, .badge-teal {
-	background-color: #569099 !important;
-	border-color: #569099 !important;
+    background-color: #569099 !important;
+    border-color: #569099 !important;
+    cursor: pointer;
 }
 .label-beige, .badge-beige {
-	background-color: #CCCC99 !important;
-	border-color: #CCCC99 !important;
+    background-color: #CCCC99 !important;
+    border-color: #CCCC99 !important;
+    cursor: pointer;
 }
 .label-green, .badge-green {
-	background-color: #3D9400 !important;
-	border-color: #3D9400 !important;
+    background-color: #3D9400 !important;
+    border-color: #3D9400 !important;
+    cursor: pointer;
 }
 .label-delete {
-	background-color: #FFC261;
+    background-color: #FFC261;
     border: 4px dotted #CF3E1C;
     padding: 0px;
     height: 70px;

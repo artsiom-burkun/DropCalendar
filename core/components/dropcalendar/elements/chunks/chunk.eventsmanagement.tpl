@@ -368,7 +368,6 @@
                     <div id="calendar"></div>
                 </div>
                 <div class="col-sm-3">
-
                     <h4>Удалить событие</h4>
                     <div id="trash" class="label-delete">
                         перетащить
@@ -399,39 +398,51 @@
                             <i class="fa fa-move"></i> Заголовок 7
                         </div>
                         <hr>
-                        <h4>Параметры события:</h4>
-                        <form role="form">
-                            <div class="form-group">
-                                <label style="width: 100%;">Время начала:</label>
-                                <input class="form-control" id="time-start" name="time-start" value="19" style="width: 20%; float: left; ">
-                                <input class="form-control" id="time-start-m" name="time-start-m" value="30" style="width: 20%; float: left; margin-left: 10px;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <button type="button" class="btn btn-default btn-xs spoiler-push pull-right" data-toggle="collapse">&#9660</button>
+                                <h3 class="panel-title">Параметры события:</h3>
                             </div>
+                            <div class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label style="width: 100%;">Время начала:</label>
+                                            <input class="form-control" id="time-start" name="time-start" value="19" style="width: 20%; float: left; ">
+                                            <input class="form-control" id="time-start-m" name="time-start-m" value="30" style="width: 20%; float: left; margin-left: 10px;">
+                                        </div>
 
-                            <br><br>
-                            <div class="form-group">
-                                <label style="width: 100%;">Продолжительность:</label>
-                                <input class="form-control" id="time-end" name="time-end" value="2" style="width: 20%; float: left;">
-                                <input class="form-control" id="time-end-m" name="time-end-m" value="30" style="width: 20%; float: left; margin-left: 10px;">
+                                        <br><br>
+                                        <div class="form-group">
+                                            <label style="width: 100%;">Продолжительность:</label>
+                                            <input class="form-control" id="time-end" name="time-end" value="2" style="width: 20%; float: left;">
+                                            <input class="form-control" id="time-end-m" name="time-end-m" value="30" style="width: 20%; float: left; margin-left: 10px;">
+                                        </div>
+
+                                        <br><br>
+                                        <div class="form-group">
+                                            <label>Место:</label>
+                                            <input class="form-control" id="mesto-provedeniya" name="mesto-provedeniya" value="Зал">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Сайт: </label>
+                                            <input class="form-control" id="site" name="site" value="http://example.com">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Примечание: </label>
+                                            <input class="form-control" id="primechanie" name="primechanie" value="Не опаздываем!">
+                                        </div>
+
+
+                                    </form>
+
+                                </div>
                             </div>
-
-                            <br><br>
-                            <div class="form-group">
-                                <label>Место:</label>
-                                <input class="form-control" id="mesto-provedeniya" name="mesto-provedeniya" value="Зал">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Сайт: </label>
-                                <input class="form-control" id="site" name="site" value="http://example.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Примечание: </label>
-                                <input class="form-control" id="primechanie" name="primechanie" value="Не опаздываем!">
-                            </div>
+                        </div>
 
 
-                        </form>
 
 
                     </div>
@@ -447,3 +458,17 @@
 </div>
 
 <div style='clear:both'></div>
+
+
+
+
+
+
+
+
+
+<script>
+    $(".spoiler-push").click(function() {
+        $(this).parent().next().collapse('toggle');
+    });
+</script>

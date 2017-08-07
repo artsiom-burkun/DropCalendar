@@ -13,6 +13,8 @@ $scriptProperties['useJqueryUi'] ? $modx->regClientScript($assetsUrl."components
 $scriptProperties['useFullcalendar'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/fullcalendar.min.js") : '';   // <!-- Fullcalendar v3.4.0   -->
 $scriptProperties['useBootstrap'] ? $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/bootstrap.min.js") : '';      // <!-- Bootstrap v3.3.7      -->
 $modx->regClientScript($assetsUrl."components/dropcalendar/js/web/locale/".$scriptProperties['locale'].".js");          // <!-- Русский язык      -->
+$modx->regClientScript($assetsUrl."components/dropcalendar/js/web/jquery.ui.touch-punch.min.js");
+
 
 $form = $modx->getChunk('DcwShow');
 $form = trim(preg_replace('/\s\s+/', ' ', $form));
