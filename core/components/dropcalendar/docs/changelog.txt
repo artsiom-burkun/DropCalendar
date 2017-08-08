@@ -8,6 +8,7 @@ Changelog for DropCalendar.
 - Modal window fix for mobile devices
 - Minor style changes
 
+
 1.0.0-pl
 ==============
 - Add calendar number

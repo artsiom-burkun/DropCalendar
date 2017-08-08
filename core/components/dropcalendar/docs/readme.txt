@@ -17,11 +17,11 @@ Javascript libraries:
 
  --------------------
  Usage:
- [[ManageEvents]]
+ [[DcManage]]
  is equal
- [[ManageEvents?
- 	&tpl=`eventsManagementTpl`
- 	&popupWindow=`windowOuterTemplate`
+ [DcManage?
+ 	&tpl=`DcEvManage`
+ 	&popupWindow=`DcwOuter`
  	&locale=`ru`
  	&calendarNumber=`0`
  	&useJquery=`1`
