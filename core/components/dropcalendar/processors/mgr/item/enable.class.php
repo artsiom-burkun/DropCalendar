@@ -24,7 +24,7 @@ class DropCalendarItemEnableProcessor extends modObjectProcessor
 
         foreach ($ids as $id) {
             /** @var DropCalendarItem $object */
-            if (!$object = $this->modx->getObject($this->classKey, $id)) {
+            if (!$object = $this->modx->getObject($this->classKey, compact('id'))) {
                 return $this->failure($this->modx->lexicon('dropcalendar_item_err_nf'));
             }
 
