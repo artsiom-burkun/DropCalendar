@@ -1,0 +1,12 @@
+/* Grid */
+.left {
+    float: left;
+}
+/* Search field */
+.x-field-search-clear,
+.x-field-search-go { border-left: 1px solid #e4e4e4 !important; }
+.x-field-search-clear:hover,
+.x-field-search-go:hover { border-left-color: transparent !important; }
+.x-field-search-clear:before { content: '\f00d' !important; }
+.x-field-search-go { right: 31px !important; border-radius: 0 !important; }
+.x-field-search-go:before { content: '\f002' !important; }

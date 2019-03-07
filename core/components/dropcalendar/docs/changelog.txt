@@ -1,0 +1,45 @@
+Changelog for DropCalendar.
+1.1.0-beta
+==============
+- Code refactoring
+- Bulma framework instead bootsrap
+- Css and js libraries upgrade
+- Snippets, chunks rename
+- Change event color by click
+- Text, border and background color for event
+- All day events
+- Security fix by AgelxNash
+
+
+1.0.1-pl
+==============
+- Snippets, chunks, categories rename
+- Table category fix
+- Add an opportunity to create event with the same title
+- Touch Punch for mobile devices
+- Modal window fix for mobile devices
+- Minor style changes
+
+
+1.0.0-pl
+==============
+- Add calendar number
+- Add site field
+- Icons change
+- Validation add
+
+
+1.0.1-beta
+==============
+- Show calendar snippet
+- Show table snippet
+- Set properties
+- Adding some chunks
+
+
+1.0.0-beta
+==============
+- CRUD for drag and drop calendar
+- Modal windows for event adding and updating
+- Component table on manager page
+- Basic design on twitter bootstrap
